@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>two pointers</title>
+      <link href="/2022/04/16/two-pointers/"/>
+      <url>/2022/04/16/two-pointers/</url>
+      
+        <content type="html"><![CDATA[<pre class="line-numbers language-none"><code class="language-none">def patition(self, A, start, end):  # partition in quick sort  if start &gt;= end:    return  left, right = start, end  pivot = A[(start + end) // 2];  while left &lt;= right:    while left &lt;= right and A[left] &lt; pivot:      left += 1    while left &lt;= rohjt and A[right] &gt; pivot:      right -= 1    if left &lt;= right:      A[left], A[right] = A[right], A[left]      left += 1      right -= 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-none"><code class="language-none"># reverse direction two pointersleft = positionright = position + 1while left &gt;= 0 and right &lt; len(s):  if left and right can stop:    break  left -= 1  right += 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-none"><code class="language-none"># same direction two pointersj = 0for i in range(n):  # keep looping until the condition is met  while j &lt; n and i to j does not fulfill the condition:    j += 1  if i to j fullfill the condition:    process the interval between i and j<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-none"><code class="language-none"># merge two pointersdef merge(list1, list2):  new_list = []  i, j = 0, 0  # merge with operating i, j, do not operate list1.pop(0)  # because pop(0) has time complexity of )(n)  while i &lt; len(list1) and j &lt; len(list2):    if list1[i] &lt; list2[j]:      new_list.append(list1[i])      i += 1    else:      new_list.append(list2[j])      j += 1    # merge the rest of the number to new_list  # do not use new_list.extend(list[i:]) and methods like that  # because list1[i:] will cost extra space  while i &lt; len(list1):    new_list.append(list1[i])    i += 1  while j &lt; len(list2):    new_list.append(list2[j])    j += 1  return new_list<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>lintcode tutorial python</title>
       <link href="/2022/04/16/lintcode-tutorial-python/"/>
       <url>/2022/04/16/lintcode-tutorial-python/</url>
