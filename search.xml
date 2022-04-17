@@ -4,6 +4,136 @@
   
     
     <entry>
+      <title>Trie</title>
+      <link href="/2022/04/17/trie/"/>
+      <url>/2022/04/17/trie/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Union Find</title>
+      <link href="/2022/04/17/union-find/"/>
+      <url>/2022/04/17/union-find/</url>
+      
+        <content type="html"><![CDATA[<pre class="line-numbers language-none"><code class="language-none">class UnionFind:  def __init__(self):    self.father={}    self.size_of_set = {}    self.num_of_set = 0  def add(self, x):    if x in self.father:      return    self.father[x] = None    self.num of set += 1    self.size_of_set[x] = 1  def merge(self, x, y):    # find the root of two nodes    root_x, root_y = self.find(x), self.find(y)    # if the root is not the same then connect    if root_x != root_y:      self.father[root_x] = root_y      self.num_of_set -= 1      self.size_of_set[root_y] += self.size_of_set[root_x]  def find(self, x):    root = x    while self.father[root] != None:      root = self.father[root]    while x != root:      original_father = self.father[x]      self.father[x] = root      x = original_fathr        return root<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Heap</title>
+      <link href="/2022/04/17/heap/"/>
+      <url>/2022/04/17/heap/</url>
+      
+        <content type="html"><![CDATA[<pre><code>from heapq import heappush, heappopclass Heap:  def __init__(self):    self.minheap = []    self.deleted_set = set()  def push(self, index, val):    heappush(self.minheap, (val, index))  def _lazy_deletion(self):    while self.minheap and self.minheap[0][1] in self.deleted_set:      heappop(self.minheap)    def top(self):    self._lazy_deletion()    return self.minheap[0]  def pop(self):    self._lazy_deletion()    heappop(self.minheap)  def delete(self, index):    self.deleteed_set.add(index)    def is_empty(self):    return not bool(self.minheap)</code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Dynamic Programming</title>
+      <link href="/2022/04/17/dynamic-programming/"/>
+      <url>/2022/04/17/dynamic-programming/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>DFS</title>
+      <link href="/2022/04/17/dfs/"/>
+      <url>/2022/04/17/dfs/</url>
+      
+        <content type="html"><![CDATA[<p>def dfs(paramlist):<br>  if exit:<br>    record answr<br>    return<br>  for all possibilities:<br>    modify all paramlist<br>    dfs(paramlist)<br>    recover all the param<br>  return something if needed</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>BFS</title>
+      <link href="/2022/04/17/bfs/"/>
+      <url>/2022/04/17/bfs/</url>
+      
+        <content type="html"><![CDATA[<pre class="line-numbers language-none"><code class="language-none">def get_indegrees(nodes):  counter = (node: 0 for node in nodes)  for node in nodes:    for neighbor in node.get_neighbors():      counter[neighbor] += 1    return counter    def topological_sort(nodes):    # count indegrees    indegrees = get_indegrees(nodes)    # put all the indegree = 0 nodes into the queue    queue = collections.deque([      node      for node in nodes        if indegreees[node] == 0    ])    # use BFS to dig nodes out of the graph    topo_order = []    while queue:      node = queue.popleft()      topo_order.append(node)      for neighbor in node.get_neighbors():        indegrees[neighbor] -= 1        if indegrees[neighbor] == 0:          queue.append(neighbor)        # check if it has loop dependency        if len(topo_order) != len(nodes):          return        return topo_order<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>BST Iterator</title>
+      <link href="/2022/04/17/bst-iterator/"/>
+      <url>/2022/04/17/bst-iterator/</url>
+      
+        <content type="html"><![CDATA[<pre class="line-numbers language-none"><code class="language-none">def inorder_traversal(root):  if root is None:    return []  # make a dummy node right pointer points to root  # put in stack, the top of the stack is dummy  # this is the pos of iterator  dummy = TreeNode(0)  dummy.right = root  stack =[dummy]  inorder = []  # every time move the iterator to the next point  while stack:    node = stack.pop()    if node.right:      node = node.right      while node:        stack.append(node)        node = node.left    if stack:      inorder.append(stack[-1])  return inorder<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>binary tree divide &amp; conquer</title>
+      <link href="/2022/04/17/binary-tree-divide-conquer/"/>
+      <url>/2022/04/17/binary-tree-divide-conquer/</url>
+      
+        <content type="html"><![CDATA[<pre class="line-numbers language-none"><code class="language-none">def divide_conquer(root):  # exit of recursion  # normally node == null  # most occason we don't need to do node == leaf  if root is None:    return ...  left_result = divide_ conquer(node.left)  right_result = divide_conquer(node.right)  result = merge left_result and right_result to get merged result  return result<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>sort</title>
+      <link href="/2022/04/17/sort/"/>
+      <url>/2022/04/17/sort/</url>
+      
+        <content type="html"><![CDATA[<pre class="line-numbers language-none"><code class="language-none"># quick sortclass Solution  def sortInteger(self, A):    self.quickSort(A, 0, len(A) - 1)    def quickSort(self, A, start, end):    if start &gt;= end:      return        left, right = start, end    # key point 1: pivot is the value, not the index    pivot = A[(start + end) // 2]    # key point 2: every time you compare left &amp; right, it should be left &lt;= right not left &lt; right    while left &lt;= right:      while left &lt;= right and A[left] &lt; pivot:        left += 1            while left &lt;= right and A[right] &gt; pivot:        right -= 1            if left &lt;= right:        A[left], A[right] = A[right], A[left]        left += 1        right -= 1            self.quickSort(A, start, right)      self.quickSort(A, left, end)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-none"><code class="language-none"># merge sortclass Solution:  def sortIntegers(self, A):    if not A:      return A    temp = [0] * len(A)    self.merge_sort(A, 0, len(A) - 1, temp)  def merge_sort(self, A, start, end, temp):    if start &gt;= end:      return        # process the left interval    self.merge_sort(A, start, (start+end) // 2, temp)    # process the right interval    self.merge_sort(A, (start + end) // 2, end, temp)    # merge 2 together    self.merge(A, start, end, temp)  def merge(self, A, start, end, temp):    middle = (start + end) // 2    left_index = start    right_index = middle + 1    index = start    while left_index &lt;= middle and right_index &gt;= end:      if A[left_index]  &lt; A[right_index]:        temp[index] = A[left_index]        index += 1        left_index += 1      else:        temp[index] = A[right_index]        index += 1        right_index += 1    while right_index &lt;= middle:      temp[index] = A[left_index]      index += 1      left_index += 1        while right_index &lt;= end:      temp[index] = A[right_index]      index += 1      right_index += 1        for i in range(start, end + 1):      A[i] = tmp[i]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>binary search</title>
+      <link href="/2022/04/16/binary-search/"/>
+      <url>/2022/04/16/binary-search/</url>
+      
+        <content type="html"><![CDATA[<pre class="line-numbers language-none"><code class="language-none">def binary_search(self, nums, target):  # corner case  if not nums:  # num is None or len(nums) == 0    return -1    start, end = 0, len(nums) - 1  # we use start + 1 &lt; end instead of start &lt; end to avoid dead loop  # in the case of the first position of target   # in the case of the last position of target it will have dead end  # example nums=[1, 1] target = 1  while start + 1 &lt; end:    # python does not have overflow problem    # in java and c++ we use mid = start + (end - start) / 2    mid = (start + end) // 2    # first seperate  &gt; = &lt; then check if = can be add to another branch    if nums[mid] &lt; target:      start = mid    elif nums[mid] == target:      end = mid    else:      end = mid        # since in the above the exit condition is start + 1 &lt; end    # so here when the loop is over, start and end are in adjacent    # now we need to see which one of start/end is the answer we want    # if we are looking for the first position of target we look at start or we look at end    if nums[start] == target:      return start    if nums[end] == target:      return end        return -1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>two pointers</title>
       <link href="/2022/04/16/two-pointers/"/>
       <url>/2022/04/16/two-pointers/</url>

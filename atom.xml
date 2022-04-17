@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-04-16T10:53:02.521Z</updated>
+  <updated>2022-04-17T03:27:09.915Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,226 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Trie</title>
+    <link href="http://example.com/2022/04/17/trie/"/>
+    <id>http://example.com/2022/04/17/trie/</id>
+    <published>2022-04-17T03:27:09.000Z</published>
+    <updated>2022-04-17T03:27:09.915Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Union Find</title>
+    <link href="http://example.com/2022/04/17/union-find/"/>
+    <id>http://example.com/2022/04/17/union-find/</id>
+    <published>2022-04-17T03:26:58.000Z</published>
+    <updated>2022-04-17T03:37:27.675Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;class UnionFind:
+  def __init__(self):
+    self.father={}
+   </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Heap</title>
+    <link href="http://example.com/2022/04/17/heap/"/>
+    <id>http://example.com/2022/04/17/heap/</id>
+    <published>2022-04-17T03:25:06.000Z</published>
+    <updated>2022-04-17T03:44:51.843Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre&gt;&lt;code&gt;from heapq import heappush, heappop
+
+class Heap:
+  def __init__(self):
+    self.minheap = []
+    self.deleted_set = set()
+
+  def</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Dynamic Programming</title>
+    <link href="http://example.com/2022/04/17/dynamic-programming/"/>
+    <id>http://example.com/2022/04/17/dynamic-programming/</id>
+    <published>2022-04-17T03:24:55.000Z</published>
+    <updated>2022-04-17T03:24:55.755Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>DFS</title>
+    <link href="http://example.com/2022/04/17/dfs/"/>
+    <id>http://example.com/2022/04/17/dfs/</id>
+    <published>2022-04-17T03:24:38.000Z</published>
+    <updated>2022-04-17T04:11:16.513Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;def dfs(paramlist):&lt;br&gt;  if exit:&lt;br&gt;    record answr&lt;br&gt;    return&lt;br&gt;  for all possibilities:&lt;br&gt;    modify all paramlist&lt;br&gt;   </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>BFS</title>
+    <link href="http://example.com/2022/04/17/bfs/"/>
+    <id>http://example.com/2022/04/17/bfs/</id>
+    <published>2022-04-17T03:24:23.000Z</published>
+    <updated>2022-04-17T04:00:30.763Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;def get_indegrees(nodes):
+  counter = (node: 0 for node in nodes)
+  for</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>BST Iterator</title>
+    <link href="http://example.com/2022/04/17/bst-iterator/"/>
+    <id>http://example.com/2022/04/17/bst-iterator/</id>
+    <published>2022-04-17T03:24:08.000Z</published>
+    <updated>2022-04-17T04:05:25.883Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;def inorder_traversal(root):
+  if root is None:
+    return []
+
+
+  #</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>binary tree divide &amp; conquer</title>
+    <link href="http://example.com/2022/04/17/binary-tree-divide-conquer/"/>
+    <id>http://example.com/2022/04/17/binary-tree-divide-conquer/</id>
+    <published>2022-04-17T03:23:48.000Z</published>
+    <updated>2022-04-17T04:07:19.823Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;def divide_conquer(root):
+  # exit of recursion
+  # normally node ==</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>sort</title>
+    <link href="http://example.com/2022/04/17/sort/"/>
+    <id>http://example.com/2022/04/17/sort/</id>
+    <published>2022-04-17T02:16:24.000Z</published>
+    <updated>2022-04-17T03:20:31.775Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;# quick sort
+class Solution
+
+  def sortInteger(self, A):
+   </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>binary search</title>
+    <link href="http://example.com/2022/04/16/binary-search/"/>
+    <id>http://example.com/2022/04/16/binary-search/</id>
+    <published>2022-04-16T13:43:40.000Z</published>
+    <updated>2022-04-16T14:03:33.451Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;def binary_search(self, nums, target):
+  # corner case
+  if not nums:
+ </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>two pointers</title>
