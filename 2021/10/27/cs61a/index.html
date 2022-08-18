@@ -1,0 +1,1257 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="cs61a, Hexo">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>cs61a | Hexo</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Hexo</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>Contact</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Hexo</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">cs61a</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2021-10-27
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Lectures"><a href="#Lectures" class="headerlink" title="Lectures"></a>Lectures</h1><h2 id="1-Functions"><a href="#1-Functions" class="headerlink" title="1 Functions"></a>1 Functions</h2><h2 id="2-Names"><a href="#2-Names" class="headerlink" title="2 Names"></a>2 Names</h2><ul>
+<li>Names</li>
+<li>Assignments</li>
+<li>User-defined functions<h3 id="Types-of-Expressions"><a href="#Types-of-Expressions" class="headerlink" title="Types of Expressions"></a>Types of Expressions</h3></li>
+</ul>
+<p><strong>Primitive Expressions</strong></p>
+<ul>
+<li>Number or Numeral</li>
+<li>Name</li>
+<li>String</li>
+</ul>
+<p><strong>Call Expressions</strong></p>
+<ul>
+<li>Operator</li>
+<li>Operand</li>
+<li><h3 id="Environment-Diagrams"><a href="#Environment-Diagrams" class="headerlink" title="Environment Diagrams"></a>Environment Diagrams</h3></li>
+</ul>
+<h2 id="3-Control"><a href="#3-Control" class="headerlink" title="3 Control"></a>3 Control</h2><h2 id="4-Higher-Order-Functions"><a href="#4-Higher-Order-Functions" class="headerlink" title="4 Higher-Order Functions"></a>4 Higher-Order Functions</h2><h2 id="5-Environments"><a href="#5-Environments" class="headerlink" title="5 Environments"></a>5 Environments</h2><h2 id="6-Iteration"><a href="#6-Iteration" class="headerlink" title="6 Iteration"></a>6 Iteration</h2><h2 id="7-Design"><a href="#7-Design" class="headerlink" title="7 Design"></a>7 Design</h2><h2 id="8-Function-Examples"><a href="#8-Function-Examples" class="headerlink" title="8 Function Examples"></a>8 Function Examples</h2><h2 id="Midterm"><a href="#Midterm" class="headerlink" title="Midterm"></a>Midterm</h2><h2 id="9-Recursion"><a href="#9-Recursion" class="headerlink" title="9 Recursion"></a>9 Recursion</h2><h2 id="10-Tree-Recursion"><a href="#10-Tree-Recursion" class="headerlink" title="10 Tree Recursion"></a>10 Tree Recursion</h2><h2 id="11-Containers"><a href="#11-Containers" class="headerlink" title="11 Containers"></a>11 Containers</h2><h2 id="12-Data-Abstraction"><a href="#12-Data-Abstraction" class="headerlink" title="12 Data Abstraction"></a>12 Data Abstraction</h2><h2 id="13-Trees"><a href="#13-Trees" class="headerlink" title="13 Trees"></a>13 Trees</h2><h2 id="14-Mutable-Values"><a href="#14-Mutable-Values" class="headerlink" title="14 Mutable Values"></a>14 Mutable Values</h2><h2 id="15-Mutable-Functions"><a href="#15-Mutable-Functions" class="headerlink" title="15 Mutable Functions"></a>15 Mutable Functions</h2><h2 id="16-Iterators"><a href="#16-Iterators" class="headerlink" title="16 Iterators"></a>16 Iterators</h2><h2 id="17-Objects"><a href="#17-Objects" class="headerlink" title="17 Objects"></a>17 Objects</h2><h2 id="18-Inheritance"><a href="#18-Inheritance" class="headerlink" title="18 Inheritance"></a>18 Inheritance</h2><h2 id="19-Representation"><a href="#19-Representation" class="headerlink" title="19 Representation"></a>19 Representation</h2><h2 id="20-Composition"><a href="#20-Composition" class="headerlink" title="20 Composition"></a>20 Composition</h2><h2 id="21-Efficiency"><a href="#21-Efficiency" class="headerlink" title="21 Efficiency[]"></a>21 Efficiency[]</h2><h2 id="22-Decomposition"><a href="#22-Decomposition" class="headerlink" title="22 Decomposition"></a>22 Decomposition</h2><h2 id="23-Data-Examples"><a href="#23-Data-Examples" class="headerlink" title="23 Data Examples"></a>23 Data Examples</h2><h2 id="Midterm-2"><a href="#Midterm-2" class="headerlink" title="Midterm 2"></a>Midterm 2</h2><h2 id="24-Users"><a href="#24-Users" class="headerlink" title="24 Users"></a>24 Users</h2><h2 id="25-Scheme"><a href="#25-Scheme" class="headerlink" title="25 Scheme"></a>25 Scheme</h2><h2 id="26-Exceptions"><a href="#26-Exceptions" class="headerlink" title="26 Exceptions[]"></a>26 Exceptions[]</h2><h2 id="27-Calculators"><a href="#27-Calculators" class="headerlink" title="27 Calculators"></a>27 Calculators</h2><h2 id="28-Intepreters"><a href="#28-Intepreters" class="headerlink" title="28 Intepreters"></a>28 Intepreters</h2><h2 id="29-Declarative-Programming"><a href="#29-Declarative-Programming" class="headerlink" title="29 Declarative Programming"></a>29 Declarative Programming</h2><h2 id="30-Tables"><a href="#30-Tables" class="headerlink" title="30 Tables"></a>30 Tables</h2><h2 id="31-Aggregation"><a href="#31-Aggregation" class="headerlink" title="31 Aggregation"></a>31 Aggregation</h2><h2 id="32-Final-Examples"><a href="#32-Final-Examples" class="headerlink" title="32 Final Examples"></a>32 Final Examples</h2><h2 id="33-Databases"><a href="#33-Databases" class="headerlink" title="33 Databases[]"></a>33 Databases[]</h2><h2 id="34-Distributed-Data"><a href="#34-Distributed-Data" class="headerlink" title="34 Distributed Data[]"></a>34 Distributed Data[]</h2><h2 id="35-Natural-Language"><a href="#35-Natural-Language" class="headerlink" title="35 Natural Language[]"></a>35 Natural Language[]</h2><h2 id="Practice-Exam"><a href="#Practice-Exam" class="headerlink" title="Practice Exam"></a>Practice Exam</h2><h2 id="Exam-1-L-1-12-amp-14-15"><a href="#Exam-1-L-1-12-amp-14-15" class="headerlink" title="Exam 1 - L 1-12 &amp; 14 - 15"></a>Exam 1 - L 1-12 &amp; 14 - 15</h2><h2 id="Exam-2-L-1-23"><a href="#Exam-2-L-1-23" class="headerlink" title="Exam 2 - L 1 - 23"></a>Exam 2 - L 1 - 23</h2><h2 id="Exam-3-L-1-31"><a href="#Exam-3-L-1-31" class="headerlink" title="Exam 3 - L 1 - 31"></a>Exam 3 - L 1 - 31</h2><h2 id="36-Tail-Calls"><a href="#36-Tail-Calls" class="headerlink" title="36 Tail Calls"></a>36 Tail Calls</h2><h2 id="37-Macros"><a href="#37-Macros" class="headerlink" title="37 Macros[]"></a>37 Macros[]</h2><h2 id="38-Streams"><a href="#38-Streams" class="headerlink" title="38 Streams[]"></a>38 Streams[]</h2><hr>
+<h1 id="Lab"><a href="#Lab" class="headerlink" title="Lab"></a>Lab</h1><h2 id="Lab00-Getting-Started"><a href="#Lab00-Getting-Started" class="headerlink" title="Lab00: Getting Started"></a>Lab00: Getting Started</h2><h2 id="Lab01-Variables-amp-Functions-Control"><a href="#Lab01-Variables-amp-Functions-Control" class="headerlink" title="Lab01: Variables &amp; Functions, Control"></a>Lab01: Variables &amp; Functions, Control</h2><h2 id="Lab02-Higher-Order-Functions-Lambda-Expressions-Self-Reference"><a href="#Lab02-Higher-Order-Functions-Lambda-Expressions-Self-Reference" class="headerlink" title="Lab02: Higher-Order Functions, Lambda Expressions, Self Reference"></a>Lab02: Higher-Order Functions, Lambda Expressions, Self Reference</h2><h2 id="Lab-03-Midterm-Review-Optional"><a href="#Lab-03-Midterm-Review-Optional" class="headerlink" title="Lab 03: Midterm Review (Optional)"></a>Lab 03: Midterm Review (Optional)</h2><h2 id="Lab-04-Recusion-Tree-Recursion"><a href="#Lab-04-Recusion-Tree-Recursion" class="headerlink" title="Lab 04: Recusion, Tree Recursion"></a>Lab 04: Recusion, Tree Recursion</h2><h2 id="Lab-05-Python-Lists-Data-Abstraction-Trees"><a href="#Lab-05-Python-Lists-Data-Abstraction-Trees" class="headerlink" title="Lab 05: Python Lists, Data Abstraction, Trees"></a>Lab 05: Python Lists, Data Abstraction, Trees</h2><h2 id="Lab-06-Nonlocal-Iterators-amp-Generators"><a href="#Lab-06-Nonlocal-Iterators-amp-Generators" class="headerlink" title="Lab 06: Nonlocal, Iterators &amp; Generators"></a>Lab 06: Nonlocal, Iterators &amp; Generators</h2><h2 id="Lab-07-Linked-Lists-Mutable-Trees-Object-Oriented-Programming"><a href="#Lab-07-Linked-Lists-Mutable-Trees-Object-Oriented-Programming" class="headerlink" title="Lab 07: Linked Lists, Mutable Trees, Object-Oriented Programming"></a>Lab 07: Linked Lists, Mutable Trees, Object-Oriented Programming</h2><h2 id="Lab-08-Midterm-Review"><a href="#Lab-08-Midterm-Review" class="headerlink" title="Lab 08: Midterm Review"></a>Lab 08: Midterm Review</h2><h2 id="Lab-09-Scheme-Scheme-Lists"><a href="#Lab-09-Scheme-Scheme-Lists" class="headerlink" title="Lab 09: Scheme, Scheme Lists"></a>Lab 09: Scheme, Scheme Lists</h2><h2 id="Lab-10-Interpreters"><a href="#Lab-10-Interpreters" class="headerlink" title="Lab 10: Interpreters"></a>Lab 10: Interpreters</h2><h2 id="Lab-11-SQL"><a href="#Lab-11-SQL" class="headerlink" title="Lab 11: SQL"></a>Lab 11: SQL</h2><h2 id="Lab-12-Final-Review"><a href="#Lab-12-Final-Review" class="headerlink" title="Lab 12: Final Review"></a>Lab 12: Final Review</h2><hr>
+<h1 id="Discussion"><a href="#Discussion" class="headerlink" title="Discussion"></a>Discussion</h1><h2 id="Disc-00-Getting-Started"><a href="#Disc-00-Getting-Started" class="headerlink" title="Disc 00: Getting Started"></a>Disc 00: Getting Started</h2><h2 id="Disc-01-Control-Environment-Diagrams"><a href="#Disc-01-Control-Environment-Diagrams" class="headerlink" title="Disc 01: Control, Environment Diagrams"></a>Disc 01: Control, Environment Diagrams</h2><h2 id="Disc-02-Highrt-Order-Functions-Self-Reference"><a href="#Disc-02-Highrt-Order-Functions-Self-Reference" class="headerlink" title="Disc 02: Highrt-Order Functions, Self Reference"></a>Disc 02: Highrt-Order Functions, Self Reference</h2><h2 id="Disc-03-Recursion"><a href="#Disc-03-Recursion" class="headerlink" title="Disc 03: Recursion"></a>Disc 03: Recursion</h2><h2 id="Disc-04-Python-lists-Tree-Recursion"><a href="#Disc-04-Python-lists-Tree-Recursion" class="headerlink" title="Disc 04: Python lists, Tree Recursion"></a>Disc 04: Python lists, Tree Recursion</h2><h2 id="Disc-05-Data-Abstraction-Trees-Mutability"><a href="#Disc-05-Data-Abstraction-Trees-Mutability" class="headerlink" title="Disc 05: Data Abstraction, Trees, Mutability"></a>Disc 05: Data Abstraction, Trees, Mutability</h2><h2 id="Disc-06-Nonlocal-Iterators-amp-Generators"><a href="#Disc-06-Nonlocal-Iterators-amp-Generators" class="headerlink" title="Disc 06: Nonlocal, Iterators &amp; Generators"></a>Disc 06: Nonlocal, Iterators &amp; Generators</h2><h2 id="Disc-07-Object-Oriented-Programming-Linked-Lists"><a href="#Disc-07-Object-Oriented-Programming-Linked-Lists" class="headerlink" title="Disc 07: Object-Oriented Programming, Linked Lists"></a>Disc 07: Object-Oriented Programming, Linked Lists</h2><h2 id="Supplemental-Disc-08-Efficiency"><a href="#Supplemental-Disc-08-Efficiency" class="headerlink" title="Supplemental Disc 08: Efficiency"></a>Supplemental Disc 08: Efficiency</h2><h2 id="Disc-09-Scheme"><a href="#Disc-09-Scheme" class="headerlink" title="Disc 09: Scheme"></a>Disc 09: Scheme</h2><h2 id="Disc-10-Interpreters"><a href="#Disc-10-Interpreters" class="headerlink" title="Disc 10: Interpreters"></a>Disc 10: Interpreters</h2><h2 id="Disc-11-SQL"><a href="#Disc-11-SQL" class="headerlink" title="Disc 11: SQL"></a>Disc 11: SQL</h2><h2 id="Disc-12-Final-Review"><a href="#Disc-12-Final-Review" class="headerlink" title="Disc 12: Final Review"></a>Disc 12: Final Review</h2><hr>
+<h1 id="HW"><a href="#HW" class="headerlink" title="HW"></a>HW</h1><h2 id="HW-01"><a href="#HW-01" class="headerlink" title="HW 01"></a>HW 01</h2><h2 id="HW-02"><a href="#HW-02" class="headerlink" title="HW 02"></a>HW 02</h2><h2 id="HW-03"><a href="#HW-03" class="headerlink" title="HW 03"></a>HW 03</h2><h2 id="HW-04"><a href="#HW-04" class="headerlink" title="HW 04"></a>HW 04</h2><h2 id="HW-05"><a href="#HW-05" class="headerlink" title="HW 05"></a>HW 05</h2><h2 id="HW-06"><a href="#HW-06" class="headerlink" title="HW 06"></a>HW 06</h2><h2 id="HW-07"><a href="#HW-07" class="headerlink" title="HW 07"></a>HW 07</h2><h2 id="HW-08"><a href="#HW-08" class="headerlink" title="HW 08"></a>HW 08</h2><h2 id="HW-09"><a href="#HW-09" class="headerlink" title="HW 09"></a>HW 09</h2><h2 id="HW-10"><a href="#HW-10" class="headerlink" title="HW 10"></a>HW 10</h2><hr>
+<h1 id="Projects"><a href="#Projects" class="headerlink" title="Projects"></a>Projects</h1><h2 id="Hog"><a href="#Hog" class="headerlink" title="Hog"></a>Hog</h2><h2 id="Hog-Contest"><a href="#Hog-Contest" class="headerlink" title="Hog Contest"></a>Hog Contest</h2><h2 id="Cats"><a href="#Cats" class="headerlink" title="Cats"></a>Cats</h2><h2 id="Ants"><a href="#Ants" class="headerlink" title="Ants"></a>Ants</h2><h2 id="Scheme"><a href="#Scheme" class="headerlink" title="Scheme"></a>Scheme</h2><h2 id="Scheme-Contest"><a href="#Scheme-Contest" class="headerlink" title="Scheme Contest"></a>Scheme Contest</h2><hr>
+<h1 id="Guerrilla"><a href="#Guerrilla" class="headerlink" title="Guerrilla"></a>Guerrilla</h1><h2 id="Guerrilla-00-Higher-Order-Functions-Environment-Diagrams-Control"><a href="#Guerrilla-00-Higher-Order-Functions-Environment-Diagrams-Control" class="headerlink" title="Guerrilla 00: Higher-Order Functions, Environment Diagrams, Control"></a>Guerrilla 00: Higher-Order Functions, Environment Diagrams, Control</h2><h2 id="Guerrilla-01-Python-Lists-Recursion-Tree-Recursion"><a href="#Guerrilla-01-Python-Lists-Recursion-Tree-Recursion" class="headerlink" title="Guerrilla 01: Python Lists, Recursion, Tree Recursion"></a>Guerrilla 01: Python Lists, Recursion, Tree Recursion</h2><h2 id="Guerrilla-02-Data-Abstraction-Trees-Nonlocal-Iterators-amp-Generators"><a href="#Guerrilla-02-Data-Abstraction-Trees-Nonlocal-Iterators-amp-Generators" class="headerlink" title="Guerrilla 02: Data Abstraction, Trees, Nonlocal, Iterators &amp; Generators"></a>Guerrilla 02: Data Abstraction, Trees, Nonlocal, Iterators &amp; Generators</h2><h2 id="Guerrilla-03-Linked-Lists-Object-Oriented-Programming"><a href="#Guerrilla-03-Linked-Lists-Object-Oriented-Programming" class="headerlink" title="Guerrilla 03: Linked Lists, Object-Oriented Programming"></a>Guerrilla 03: Linked Lists, Object-Oriented Programming</h2><h2 id="Guerrilla-04-Scheme-Interpreters"><a href="#Guerrilla-04-Scheme-Interpreters" class="headerlink" title="Guerrilla 04: Scheme, Interpreters"></a>Guerrilla 04: Scheme, Interpreters</h2><h2 id="Guerrilla-05-SQL"><a href="#Guerrilla-05-SQL" class="headerlink" title="Guerrilla 05: SQL"></a>Guerrilla 05: SQL</h2><hr>
+<h1 id="Textbook"><a href="#Textbook" class="headerlink" title="Textbook"></a>Textbook</h1><h2 id="Chapter-1-Building-Abstractions-with-Functions"><a href="#Chapter-1-Building-Abstractions-with-Functions" class="headerlink" title="Chapter 1: Building Abstractions with Functions"></a>Chapter 1: Building Abstractions with Functions</h2><h3 id="1-1-Getting-Started"><a href="#1-1-Getting-Started" class="headerlink" title="1.1 Getting Started"></a>1.1 Getting Started</h3><p>All computing begins with representing information, specifying logic to process it, and designing abstractions that manage the complexity of that logic. Mastering these fundamentals will require us to understand precisely how computers interpret computer programs and carry out computational processes.</p>
+<p>Structure and Interpretation of Computer Programs (SICP) by Harold Abelson and Gerald Jay Sussman with Julie Sussman</p>
+<h4 id="1-1-1-Programming-in-Python"><a href="#1-1-1-Programming-in-Python" class="headerlink" title="1.1.1 Programming in Python"></a>1.1.1 Programming in Python</h4><p>The language was conceived and first implemented by Guido van Rossum in the late 1980’s. The first chapter of his Python 3 Tutorial explains why Python is so popular</p>
+<p>python3 tutorial<br><a target="_blank" rel="noopener" href="https://docs.python.org/3/tutorial/appetite.html">https://docs.python.org/3/tutorial/appetite.html</a></p>
+<p>zen of python<br><a target="_blank" rel="noopener" href="https://www.python.org/dev/peps/pep-0020/">https://www.python.org/dev/peps/pep-0020/</a></p>
+<p>on-going projects<br><a target="_blank" rel="noopener" href="https://pypi.org/">https://pypi.org/</a></p>
+<h4 id="1-1-2-Installing-Python-3"><a href="#1-1-2-Installing-Python-3" class="headerlink" title="1.1.2 Installing Python 3"></a>1.1.2 Installing Python 3</h4><h4 id="1-1-3-Interactive-Sessions"><a href="#1-1-3-Interactive-Sessions" class="headerlink" title="1.1.3 Interactive Sessions"></a>1.1.3 Interactive Sessions</h4><p>Interactive controls. Each session keeps a history of what you have typed. To access that history, press <Control>-P (previous) and <Control>-N (next). <Control>-D exits a session, which discards this history. Up and down arrows also cycle through history on some systems.</p>
+<h4 id="1-1-4-First-Examples"><a href="#1-1-4-First-Examples" class="headerlink" title="1.1.4 First Examples"></a>1.1.4 First Examples</h4><p><strong>Statements &amp; Expressions</strong>. Python code consists of expressions and statements. Broadly, computer programs consist of instructions to either</p>
+<p>Compute some value<br>Carry out some action<br>Statements typically describe actions. When the Python interpreter executes a statement, it carries out the corresponding action. On the other hand, expressions typically describe computations. When Python evaluates an expression, it computes the value of that expression. This chapter introduces several types of statements and expressions.</p>
+<p><strong>Functions.</strong> Functions encapsulate logic that manipulates data.</p>
+<p><strong>Objects</strong> An object seamlessly bundles together data and the logic that manipulates that data, in a way that manages the complexity of both</p>
+<p>**Interpreters.**Evaluating compound expressions requires a precise procedure that interprets code in a predictable way. A program that implements such a procedure, evaluating compound expressions, is called an interpreter. </p>
+<p> functions are objects, objects are functions, and interpreters are instances of both.</p>
+<h4 id="1-1-5-Errors"><a href="#1-1-5-Errors" class="headerlink" title="1.1.5 Errors"></a>1.1.5 Errors</h4><p>Learning to interpret errors and diagnose the cause of unexpected errors is called debugging. Some guiding principles of debugging are:</p>
+<ol>
+<li>Test incrementally: Every well-written program is composed of small, modular components that can be tested individually. Try out everything you write as soon as possible to identify problems early and gain confidence in your components.</li>
+<li>Isolate errors: An error in the output of a statement can typically be attributed to a particular modular component. When trying to diagnose a problem, trace the error to the smallest fragment of code you can before trying to correct it.</li>
+<li>Check your assumptions: Interpreters do carry out your instructions to the letter — no more and no less. Their output is unexpected when the behavior of some code does not match what the programmer believes (or assumes) that behavior to be. Know your assumptions, then focus your debugging effort on verifying that your assumptions actually hold.</li>
+<li>Consult others: You are not alone! If you don’t understand an error message, ask a friend, instructor, or search engine. If you have isolated an error, but can’t figure out how to correct it, ask someone else to take a look. A lot of valuable programming knowledge is shared in the process of group problem solving.<br>Incremental testing, modular design, precise assumptions, and teamwork are themes that persist throughout this te  xt. Hopefully, they will also persist throughout your computer science career.</li>
+</ol>
+<h3 id="1-2-Elements-of-Programming"><a href="#1-2-Elements-of-Programming" class="headerlink" title="1.2 Elements of Programming"></a>1.2 Elements of Programming</h3><p>The language also serves as a framework within which we organize our ideas about computational processes.</p>
+<p>programs must be written for people to read, and only incidentally for machines to execute.</p>
+<p>the means that the language provides for combining simple ideas to form more complex ideas. Every powerful language has three such mechanisms:</p>
+<ul>
+<li><strong>primitive expressions and statements</strong>, which represent the simplest building blocks that the language provides,</li>
+<li><strong>means of combination</strong>, by which compound elements are built from simpler ones, and</li>
+<li><strong>means of abstraction</strong>, by which compound elements can be named and manipulated as units.</li>
+</ul>
+<p>In programming, we deal with two kinds of elements: functions and data.</p>
+<p>Informally, data is stuff that we want to manipulate, and functions describe the rules for manipulating the data. Thus, any powerful programming language should be able to describe primitive data and primitive functions, as well as have some methods for combining and abstracting both functions and data.</p>
+<h4 id="1-2-1-Expressions"><a href="#1-2-1-Expressions" class="headerlink" title="1.2.1  Expressions"></a>1.2.1  Expressions</h4><p> <em>infix notation</em>, where the operator (e.g., +, -, *, or /) appears in between the operands (numbers)</p>
+<h4 id="1-2-2-Call-Expressions"><a href="#1-2-2-Call-Expressions" class="headerlink" title="1.2.2 Call Expressions"></a>1.2.2 Call Expressions</h4><p><em>call expression</em>, which applies a function to some arguments.</p>
+<p>This call expression has subexpressions: the operator is an expression that precedes parentheses, which enclose a comma-delimited list of operand expressions.</p>
+<p>The operator specifies a function. </p>
+<p>Function notation has three principal advantages over the mathematical convention of infix notation. First, functions may take an arbitrary number of arguments:No ambiguity can arise, because the function name always precedes its arguments.</p>
+<p>Second, function notation extends in a straightforward way to <em>nested expressions</em>, where the elements are themselves compound expressions. In nested call expressions, unlike compound infix expressions, the structure of the nesting is entirely explicit in the parentheses.</p>
+<p>Third, mathematical notation has a great variety of forms: multiplication appears between terms, exponents appear as superscripts, division as a horizontal bar, and a square root as a roof with slanted siding. Some of this notation is very hard to type! However, all of this complexity can be unified via the notation of call expressions. While Python supports common mathematical operators using infix notation (like + and -), any operator can be expressed as a function with a name.</p>
+<p>The order of the arguments in a call expression matters.</p>
+<h4 id="1-2-3-Importing-Library-Functions"><a href="#1-2-3-Importing-Library-Functions" class="headerlink" title="1.2.3 Importing Library Functions"></a>1.2.3 Importing Library Functions</h4><p>Python defines a very large number of functions, including the operator functions mentioned in the preceding section, but does not make all of their names available by default. Instead, it organizes the functions and other quantities that it knows about into modules, which together comprise the Python Library. To use these elements, one imports them.</p>
+<p>An import statement designates a module name (e.g., operator or math), and then lists the named attributes of that module to import (e.g., sqrt). Once a function is imported, it can be called multiple times.</p>
+<p>The Python 3 Library Docs list the functions defined by each module<br><a target="_blank" rel="noopener" href="http://docs.python.org/py3k/library/index.html">http://docs.python.org/py3k/library/index.html</a></p>
+<h4 id="1-2-4-Names-and-the-Environment"><a href="#1-2-4-Names-and-the-Environment" class="headerlink" title="1.2.4 Names and the Environment"></a>1.2.4 Names and the Environment</h4><p>If a value has been given a name, we say that the name binds to the value.</p>
+<p>In Python, we can establish new bindings using the assignment statement, which contains a name to the left of = and a value to the right</p>
+<p>Names are also bound via import statements.</p>
+<p>The = symbol is called the assignment operator in Python (and many other languages). Assignment is our simplest means of abstraction, for it allows us to use simple names to refer to the results of compound operations</p>
+<p>The possibility of binding names to values and later retrieving those values by name means that the interpreter must maintain some sort of memory that keeps track of the names, values, and bindings. This memory is called an environment.</p>
+<p>Names can also be bound to functions.</p>
+<p>In Python, names are often called variable names or variables because they can be bound to different values in the course of executing a program. When a name is bound to a new value through assignment, it is no longer bound to any previous value. One can even bind built-in names to new values.</p>
+<h4 id="1-2-5-Evaluating-Nested-Expressions"><a href="#1-2-5-Evaluating-Nested-Expressions" class="headerlink" title="1.2.5 Evaluating Nested Expressions"></a>1.2.5 Evaluating Nested Expressions</h4><h4 id="1-2-6-The-Non-Pure-Print-Function"><a href="#1-2-6-The-Non-Pure-Print-Function" class="headerlink" title="1.2.6 The Non-Pure Print Function"></a>1.2.6 The Non-Pure Print Function</h4><p><strong>Pure Function</strong><br><strong>Non-Pure Function</strong></p>
+<h3 id="1-3-Defining-New-Functions"><a href="#1-3-Defining-New-Functions" class="headerlink" title="1.3 Defining New Functions"></a>1.3 Defining New Functions</h3><h3 id="1-4-Designing-Functions"><a href="#1-4-Designing-Functions" class="headerlink" title="1.4 Designing Functions"></a>1.4 Designing Functions</h3><h3 id="1-5-Control"><a href="#1-5-Control" class="headerlink" title="1.5 Control"></a>1.5 Control</h3><h3 id="1-6-Higher-Order-Functions"><a href="#1-6-Higher-Order-Functions" class="headerlink" title="1.6 Higher-Order Functions"></a>1.6 Higher-Order Functions</h3><h3 id="1-7-Recursive-Functions"><a href="#1-7-Recursive-Functions" class="headerlink" title="1.7 Recursive Functions"></a>1.7 Recursive Functions</h3><h2 id="Chapter-2-Building-Abstractions-with-Data"><a href="#Chapter-2-Building-Abstractions-with-Data" class="headerlink" title="Chapter 2: Building Abstractions with Data"></a>Chapter 2: Building Abstractions with Data</h2><h3 id="2-1-Introduction"><a href="#2-1-Introduction" class="headerlink" title="2.1 Introduction"></a>2.1 Introduction</h3><h3 id="2-2-Data-Abstraction"><a href="#2-2-Data-Abstraction" class="headerlink" title="2.2 Data Abstraction"></a>2.2 Data Abstraction</h3><h3 id="2-3-Sequences"><a href="#2-3-Sequences" class="headerlink" title="2.3 Sequences"></a>2.3 Sequences</h3><h3 id="2-4-Mutable-Data"><a href="#2-4-Mutable-Data" class="headerlink" title="2.4 Mutable Data"></a>2.4 Mutable Data</h3><h3 id="2-5-Object-Oriented-Programming"><a href="#2-5-Object-Oriented-Programming" class="headerlink" title="2.5 Object-Oriented Programming"></a>2.5 Object-Oriented Programming</h3><h3 id="2-6-Implementing-Classes-and-Objects"><a href="#2-6-Implementing-Classes-and-Objects" class="headerlink" title="2.6 Implementing Classes and Objects"></a>2.6 Implementing Classes and Objects</h3><h3 id="2-7-Object-Abstraction"><a href="#2-7-Object-Abstraction" class="headerlink" title="2.7 Object Abstraction"></a>2.7 Object Abstraction</h3><h3 id="2-8-Efficiency"><a href="#2-8-Efficiency" class="headerlink" title="2.8 Efficiency"></a>2.8 Efficiency</h3><h3 id="2-9-Recursive-Objects"><a href="#2-9-Recursive-Objects" class="headerlink" title="2.9 Recursive Objects"></a>2.9 Recursive Objects</h3><h2 id="Chapter-3-Interpreting-Computer-Programs"><a href="#Chapter-3-Interpreting-Computer-Programs" class="headerlink" title="Chapter 3: Interpreting Computer Programs"></a>Chapter 3: Interpreting Computer Programs</h2><h3 id="3-1-Introduction"><a href="#3-1-Introduction" class="headerlink" title="3.1 Introduction"></a>3.1 Introduction</h3><h3 id="3-2-Functional-Programming"><a href="#3-2-Functional-Programming" class="headerlink" title="3.2 Functional Programming"></a>3.2 Functional Programming</h3><h3 id="3-3-Exceptions"><a href="#3-3-Exceptions" class="headerlink" title="3.3 Exceptions"></a>3.3 Exceptions</h3><h3 id="3-4-Interpreters-for-Languages-with-Combination"><a href="#3-4-Interpreters-for-Languages-with-Combination" class="headerlink" title="3.4 Interpreters for Languages with Combination"></a>3.4 Interpreters for Languages with Combination</h3><h3 id="3-5-Interpreters-for-Languages-with-Abstraction"><a href="#3-5-Interpreters-for-Languages-with-Abstraction" class="headerlink" title="3.5 Interpreters for Languages with Abstraction"></a>3.5 Interpreters for Languages with Abstraction</h3><h2 id="Chapter-4-Data-Processing"><a href="#Chapter-4-Data-Processing" class="headerlink" title="Chapter 4: Data Processing"></a>Chapter 4: Data Processing</h2><h3 id="4-1-Introduction"><a href="#4-1-Introduction" class="headerlink" title="4.1 Introduction"></a>4.1 Introduction</h3><h3 id="4-2-Implicit-Sequences"><a href="#4-2-Implicit-Sequences" class="headerlink" title="4.2 Implicit Sequences"></a>4.2 Implicit Sequences</h3><h3 id="4-3-Declarative-Programming"><a href="#4-3-Declarative-Programming" class="headerlink" title="4.3 Declarative Programming"></a>4.3 Declarative Programming</h3><h3 id="4-4-Logic-Programming"><a href="#4-4-Logic-Programming" class="headerlink" title="4.4 Logic Programming"></a>4.4 Logic Programming</h3><h3 id="4-5-Unification"><a href="#4-5-Unification" class="headerlink" title="4.5 Unification"></a>4.5 Unification</h3><h3 id="4-6-Distributed-Computing"><a href="#4-6-Distributed-Computing" class="headerlink" title="4.6 Distributed Computing"></a>4.6 Distributed Computing</h3><h3 id="4-7-Distributed-Data-Processing"><a href="#4-7-Distributed-Data-Processing" class="headerlink" title="4.7 Distributed Data Processing"></a>4.7 Distributed Data Processing</h3><h3 id="4-8-Parallel-Computing"><a href="#4-8-Parallel-Computing" class="headerlink" title="4.8 Parallel Computing"></a>4.8 Parallel Computing</h3>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Beixi Hao</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://example.com/2021/10/27/cs61a/">http://example.com/2021/10/27/cs61a/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">Beixi Hao</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2021/10/29/react-crash-course/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="react crash course">
+                        
+                        <span class="card-title">react crash course</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-29
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Beixi Hao
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/10/26/vue-crash-course/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="vue crash course">
+                        
+                        <span class="card-title">vue crash course</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-26
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Beixi Hao
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2022</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">Beixi Hao</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>

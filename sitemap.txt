@@ -1,0 +1,8 @@
+http://example.com/2021/10/29/react-crash-course/
+http://example.com/2021/10/27/cs61a/
+http://example.com/2021/10/26/vue-crash-course/
+http://example.com/2021/10/24/hexo-blog/
+http://example.com/2021/10/21/on-premise-deployment-machine-prep/
+http://example.com/2021/09/09/test-article0/
+http://example.com/2021/09/09/hello-world/
+http://example.com/
