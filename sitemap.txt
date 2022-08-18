@@ -1,3 +1,5 @@
+http://example.com/2022/08/17/leetcode-27/
+http://example.com/2022/08/17/redeploy-hexo/
 http://example.com/2021/10/29/react-crash-course/
 http://example.com/2021/10/27/cs61a/
 http://example.com/2021/10/26/vue-crash-course/
