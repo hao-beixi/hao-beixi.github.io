@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-08-18T02:30:42.144Z</updated>
+  <updated>2022-08-19T00:44:34.684Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,155 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>redeploy hexo</title>
-    <link href="http://example.com/2022/08/17/redeploy-hexo/"/>
-    <id>http://example.com/2022/08/17/redeploy-hexo/</id>
-    <published>2022-08-18T02:30:08.000Z</published>
-    <updated>2022-08-18T02:30:42.144Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://wungjyan.github.io/2018/08/17/move-hexo/">https://wungjyan.github.io/2018/08/17/move-hexo/</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://wungjyan.github.io/2018/08/17/move-hexo/&quot;&gt;https://wungjyan.github.io/2018/08/17/move-hexo/&lt;/a&gt;&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode 27</title>
-    <link href="http://example.com/2022/08/17/leetcode-27/"/>
-    <id>http://example.com/2022/08/17/leetcode-27/</id>
-    <published>2022-08-18T02:29:29.000Z</published>
-    <updated>2022-08-18T03:01:15.330Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Brute-Force"><a href="#Brute-Force" class="headerlink" title="Brute Force"></a>Brute Force</h1><p>O(n^2)</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">removeElement</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], val: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        size = <span class="built_in">len</span>(nums)</span><br><span class="line">        i = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> i &lt; size:</span><br><span class="line">            <span class="built_in">print</span>(i)</span><br><span class="line">            <span class="keyword">if</span> nums[i] == val:</span><br><span class="line">                <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i+<span class="number">1</span>, <span class="built_in">len</span>(nums)):</span><br><span class="line">                    nums[j-<span class="number">1</span>] = nums[j]</span><br><span class="line">                i = i - <span class="number">1</span></span><br><span class="line">                size = size - <span class="number">1</span></span><br><span class="line">            i = i + <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> size</span><br></pre></td></tr></table></figure><h1 id="Slow-and-Fast-Pointers"><a href="#Slow-and-Fast-Pointers" class="headerlink" title="Slow and Fast Pointers"></a>Slow and Fast Pointers</h1><p>O(n)</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">removeElement</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], val: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        slowindex, fastindex = <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> fastindex &lt; <span class="built_in">len</span>(nums):</span><br><span class="line">            <span class="keyword">if</span> val != nums[fastindex]:</span><br><span class="line">                nums[slowindex] = nums[fastindex]</span><br><span class="line">                slowindex += <span class="number">1</span></span><br><span class="line">            fastindex += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> slowindex</span><br></pre></td></tr></table></figure><h1 id="Left-and-Right-Pointers"><a href="#Left-and-Right-Pointers" class="headerlink" title="Left and Right Pointers"></a>Left and Right Pointers</h1><p>O(n)</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">removeElement</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], val: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        left, right = <span class="number">0</span>, <span class="built_in">len</span>(nums) - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> left &lt;= right:</span><br><span class="line">            <span class="keyword">while</span> left &lt;= right <span class="keyword">and</span> nums[left] != val:</span><br><span class="line">                left += <span class="number">1</span></span><br><span class="line">            <span class="keyword">while</span> left &lt;= right <span class="keyword">and</span> nums[right] == val:</span><br><span class="line">                right -= <span class="number">1</span></span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> left &lt; right:</span><br><span class="line">                nums[left] = nums[right]</span><br><span class="line">                left += <span class="number">1</span></span><br><span class="line">                right -= <span class="number">1</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> left</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Brute-Force&quot;&gt;&lt;a href=&quot;#Brute-Force&quot; class=&quot;headerlink&quot; title=&quot;Brute Force&quot;&gt;&lt;/a&gt;Brute Force&lt;/h1&gt;&lt;p&gt;O(n^2)&lt;/p&gt;
-&lt;figure class=&quot;highligh</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>react crash course</title>
-    <link href="http://example.com/2021/10/29/react-crash-course/"/>
-    <id>http://example.com/2021/10/29/react-crash-course/</id>
-    <published>2021-10-29T17:29:34.000Z</published>
-    <updated>2022-08-12T15:07:54.216Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.youtube.com/watch?v=w7ejDZ8SWv8">https://www.youtube.com/watch?v=w7ejDZ8SWv8</a></p><h1 id="React-Crash-Course"><a href="#React-Crash-Course" class="headerlink" title="React Crash Course"></a>React Crash Course</h1><p>Learn React by building a hands on project</p><h2 id="What-Is-React"><a href="#What-Is-React" class="headerlink" title="What Is React?"></a>What Is React?</h2><p>React is a library for building user interfaces</p><p>React runs on the client as a SPA (Single Page App), but can be used to build full stack apps by communicating with a server/API (eg. MERN stack)</p><p>React is often referred to as a front-end “framework” because it is capable and directly comparable to a framework such as Angular or Vue</p><h2 id="Why-Would-You-Use-React"><a href="#Why-Would-You-Use-React" class="headerlink" title="Why Would You Use React?"></a>Why Would You Use React?</h2><ul><li><p>Structure the “view” layer of your application</p></li><li><p>Reusable components with their own state</p></li><li><p>JSX - Dynamic markup</p></li><li><p>Interactive UIs with Virtual DOM</p></li><li><p>Performance &amp; Testing</p></li><li><p>Very popular in the industry</p><h2 id="What-should-you-know-first"><a href="#What-should-you-know-first" class="headerlink" title="What should you know first?"></a>What should you know first?</h2><p>you should have a good handle on JavaScript.<br>I would not suggest jumping into React without learning JavaScript first</p></li><li><p>data types, variables, functions, loops, etc</p></li><li><p>promises &amp; asynchronous programming</p></li><li><p>array methods like forEach() &amp; map()</p></li><li><p>Fetch API &amp; making HTTP requests</p><h2 id="UI-components"><a href="#UI-components" class="headerlink" title="UI components"></a>UI components</h2><p>when using React, think of your UI as a bunch of separate components</p><h2 id="Components-Functions-vs-Classes"><a href="#Components-Functions-vs-Classes" class="headerlink" title="Components: Functions vs. Classes"></a>Components: Functions vs. Classes</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">export const Header = () =&gt; &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;h1&gt;My Header&lt;/h1&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">export default class Header extends React.Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;h1&gt;My Header&lt;/h1&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>Components render/return JSX (JavaScript Syntax Extension)<br>Components can also takes in “props”</p><Header title="My Title">## Working With StateComponents can have "state" which is an object that determines how a component renders and behaves</li></ul><p>“App”  or “global” state refers to state that is available to the entire UI, not just a single component.</p><p>Prior to React 16.8, we had to use class based components to use state.<br>Now we can use functional components with hooks</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=w7ejDZ8SWv8&quot;&gt;https://www.youtube.com/watch?v=w7ejDZ8SWv8&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;React-Crash-Course&quot;&gt;&lt;a </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>cs61a</title>
-    <link href="http://example.com/2021/10/27/cs61a/"/>
-    <id>http://example.com/2021/10/27/cs61a/</id>
-    <published>2021-10-27T19:20:36.000Z</published>
-    <updated>2022-08-12T15:07:54.215Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Lectures"><a href="#Lectures" class="headerlink" title="Lectures"></a>Lectures</h1><h2 id="1-Functions"><a href="#1-Functions" class="headerlink" title="1 Functions"></a>1 Functions</h2><h2 id="2-Names"><a href="#2-Names" class="headerlink" title="2 Names"></a>2 Names</h2><ul><li>Names</li><li>Assignments</li><li>User-defined functions<h3 id="Types-of-Expressions"><a href="#Types-of-Expressions" class="headerlink" title="Types of Expressions"></a>Types of Expressions</h3></li></ul><p><strong>Primitive Expressions</strong></p><ul><li>Number or Numeral</li><li>Name</li><li>String</li></ul><p><strong>Call Expressions</strong></p><ul><li>Operator</li><li>Operand</li><li><h3 id="Environment-Diagrams"><a href="#Environment-Diagrams" class="headerlink" title="Environment Diagrams"></a>Environment Diagrams</h3></li></ul><h2 id="3-Control"><a href="#3-Control" class="headerlink" title="3 Control"></a>3 Control</h2><h2 id="4-Higher-Order-Functions"><a href="#4-Higher-Order-Functions" class="headerlink" title="4 Higher-Order Functions"></a>4 Higher-Order Functions</h2><h2 id="5-Environments"><a href="#5-Environments" class="headerlink" title="5 Environments"></a>5 Environments</h2><h2 id="6-Iteration"><a href="#6-Iteration" class="headerlink" title="6 Iteration"></a>6 Iteration</h2><h2 id="7-Design"><a href="#7-Design" class="headerlink" title="7 Design"></a>7 Design</h2><h2 id="8-Function-Examples"><a href="#8-Function-Examples" class="headerlink" title="8 Function Examples"></a>8 Function Examples</h2><h2 id="Midterm"><a href="#Midterm" class="headerlink" title="Midterm"></a>Midterm</h2><h2 id="9-Recursion"><a href="#9-Recursion" class="headerlink" title="9 Recursion"></a>9 Recursion</h2><h2 id="10-Tree-Recursion"><a href="#10-Tree-Recursion" class="headerlink" title="10 Tree Recursion"></a>10 Tree Recursion</h2><h2 id="11-Containers"><a href="#11-Containers" class="headerlink" title="11 Containers"></a>11 Containers</h2><h2 id="12-Data-Abstraction"><a href="#12-Data-Abstraction" class="headerlink" title="12 Data Abstraction"></a>12 Data Abstraction</h2><h2 id="13-Trees"><a href="#13-Trees" class="headerlink" title="13 Trees"></a>13 Trees</h2><h2 id="14-Mutable-Values"><a href="#14-Mutable-Values" class="headerlink" title="14 Mutable Values"></a>14 Mutable Values</h2><h2 id="15-Mutable-Functions"><a href="#15-Mutable-Functions" class="headerlink" title="15 Mutable Functions"></a>15 Mutable Functions</h2><h2 id="16-Iterators"><a href="#16-Iterators" class="headerlink" title="16 Iterators"></a>16 Iterators</h2><h2 id="17-Objects"><a href="#17-Objects" class="headerlink" title="17 Objects"></a>17 Objects</h2><h2 id="18-Inheritance"><a href="#18-Inheritance" class="headerlink" title="18 Inheritance"></a>18 Inheritance</h2><h2 id="19-Representation"><a href="#19-Representation" class="headerlink" title="19 Representation"></a>19 Representation</h2><h2 id="20-Composition"><a href="#20-Composition" class="headerlink" title="20 Composition"></a>20 Composition</h2><h2 id="21-Efficiency"><a href="#21-Efficiency" class="headerlink" title="21 Efficiency[]"></a>21 Efficiency[]</h2><h2 id="22-Decomposition"><a href="#22-Decomposition" class="headerlink" title="22 Decomposition"></a>22 Decomposition</h2><h2 id="23-Data-Examples"><a href="#23-Data-Examples" class="headerlink" title="23 Data Examples"></a>23 Data Examples</h2><h2 id="Midterm-2"><a href="#Midterm-2" class="headerlink" title="Midterm 2"></a>Midterm 2</h2><h2 id="24-Users"><a href="#24-Users" class="headerlink" title="24 Users"></a>24 Users</h2><h2 id="25-Scheme"><a href="#25-Scheme" class="headerlink" title="25 Scheme"></a>25 Scheme</h2><h2 id="26-Exceptions"><a href="#26-Exceptions" class="headerlink" title="26 Exceptions[]"></a>26 Exceptions[]</h2><h2 id="27-Calculators"><a href="#27-Calculators" class="headerlink" title="27 Calculators"></a>27 Calculators</h2><h2 id="28-Intepreters"><a href="#28-Intepreters" class="headerlink" title="28 Intepreters"></a>28 Intepreters</h2><h2 id="29-Declarative-Programming"><a href="#29-Declarative-Programming" class="headerlink" title="29 Declarative Programming"></a>29 Declarative Programming</h2><h2 id="30-Tables"><a href="#30-Tables" class="headerlink" title="30 Tables"></a>30 Tables</h2><h2 id="31-Aggregation"><a href="#31-Aggregation" class="headerlink" title="31 Aggregation"></a>31 Aggregation</h2><h2 id="32-Final-Examples"><a href="#32-Final-Examples" class="headerlink" title="32 Final Examples"></a>32 Final Examples</h2><h2 id="33-Databases"><a href="#33-Databases" class="headerlink" title="33 Databases[]"></a>33 Databases[]</h2><h2 id="34-Distributed-Data"><a href="#34-Distributed-Data" class="headerlink" title="34 Distributed Data[]"></a>34 Distributed Data[]</h2><h2 id="35-Natural-Language"><a href="#35-Natural-Language" class="headerlink" title="35 Natural Language[]"></a>35 Natural Language[]</h2><h2 id="Practice-Exam"><a href="#Practice-Exam" class="headerlink" title="Practice Exam"></a>Practice Exam</h2><h2 id="Exam-1-L-1-12-amp-14-15"><a href="#Exam-1-L-1-12-amp-14-15" class="headerlink" title="Exam 1 - L 1-12 &amp; 14 - 15"></a>Exam 1 - L 1-12 &amp; 14 - 15</h2><h2 id="Exam-2-L-1-23"><a href="#Exam-2-L-1-23" class="headerlink" title="Exam 2 - L 1 - 23"></a>Exam 2 - L 1 - 23</h2><h2 id="Exam-3-L-1-31"><a href="#Exam-3-L-1-31" class="headerlink" title="Exam 3 - L 1 - 31"></a>Exam 3 - L 1 - 31</h2><h2 id="36-Tail-Calls"><a href="#36-Tail-Calls" class="headerlink" title="36 Tail Calls"></a>36 Tail Calls</h2><h2 id="37-Macros"><a href="#37-Macros" class="headerlink" title="37 Macros[]"></a>37 Macros[]</h2><h2 id="38-Streams"><a href="#38-Streams" class="headerlink" title="38 Streams[]"></a>38 Streams[]</h2><hr><h1 id="Lab"><a href="#Lab" class="headerlink" title="Lab"></a>Lab</h1><h2 id="Lab00-Getting-Started"><a href="#Lab00-Getting-Started" class="headerlink" title="Lab00: Getting Started"></a>Lab00: Getting Started</h2><h2 id="Lab01-Variables-amp-Functions-Control"><a href="#Lab01-Variables-amp-Functions-Control" class="headerlink" title="Lab01: Variables &amp; Functions, Control"></a>Lab01: Variables &amp; Functions, Control</h2><h2 id="Lab02-Higher-Order-Functions-Lambda-Expressions-Self-Reference"><a href="#Lab02-Higher-Order-Functions-Lambda-Expressions-Self-Reference" class="headerlink" title="Lab02: Higher-Order Functions, Lambda Expressions, Self Reference"></a>Lab02: Higher-Order Functions, Lambda Expressions, Self Reference</h2><h2 id="Lab-03-Midterm-Review-Optional"><a href="#Lab-03-Midterm-Review-Optional" class="headerlink" title="Lab 03: Midterm Review (Optional)"></a>Lab 03: Midterm Review (Optional)</h2><h2 id="Lab-04-Recusion-Tree-Recursion"><a href="#Lab-04-Recusion-Tree-Recursion" class="headerlink" title="Lab 04: Recusion, Tree Recursion"></a>Lab 04: Recusion, Tree Recursion</h2><h2 id="Lab-05-Python-Lists-Data-Abstraction-Trees"><a href="#Lab-05-Python-Lists-Data-Abstraction-Trees" class="headerlink" title="Lab 05: Python Lists, Data Abstraction, Trees"></a>Lab 05: Python Lists, Data Abstraction, Trees</h2><h2 id="Lab-06-Nonlocal-Iterators-amp-Generators"><a href="#Lab-06-Nonlocal-Iterators-amp-Generators" class="headerlink" title="Lab 06: Nonlocal, Iterators &amp; Generators"></a>Lab 06: Nonlocal, Iterators &amp; Generators</h2><h2 id="Lab-07-Linked-Lists-Mutable-Trees-Object-Oriented-Programming"><a href="#Lab-07-Linked-Lists-Mutable-Trees-Object-Oriented-Programming" class="headerlink" title="Lab 07: Linked Lists, Mutable Trees, Object-Oriented Programming"></a>Lab 07: Linked Lists, Mutable Trees, Object-Oriented Programming</h2><h2 id="Lab-08-Midterm-Review"><a href="#Lab-08-Midterm-Review" class="headerlink" title="Lab 08: Midterm Review"></a>Lab 08: Midterm Review</h2><h2 id="Lab-09-Scheme-Scheme-Lists"><a href="#Lab-09-Scheme-Scheme-Lists" class="headerlink" title="Lab 09: Scheme, Scheme Lists"></a>Lab 09: Scheme, Scheme Lists</h2><h2 id="Lab-10-Interpreters"><a href="#Lab-10-Interpreters" class="headerlink" title="Lab 10: Interpreters"></a>Lab 10: Interpreters</h2><h2 id="Lab-11-SQL"><a href="#Lab-11-SQL" class="headerlink" title="Lab 11: SQL"></a>Lab 11: SQL</h2><h2 id="Lab-12-Final-Review"><a href="#Lab-12-Final-Review" class="headerlink" title="Lab 12: Final Review"></a>Lab 12: Final Review</h2><hr><h1 id="Discussion"><a href="#Discussion" class="headerlink" title="Discussion"></a>Discussion</h1><h2 id="Disc-00-Getting-Started"><a href="#Disc-00-Getting-Started" class="headerlink" title="Disc 00: Getting Started"></a>Disc 00: Getting Started</h2><h2 id="Disc-01-Control-Environment-Diagrams"><a href="#Disc-01-Control-Environment-Diagrams" class="headerlink" title="Disc 01: Control, Environment Diagrams"></a>Disc 01: Control, Environment Diagrams</h2><h2 id="Disc-02-Highrt-Order-Functions-Self-Reference"><a href="#Disc-02-Highrt-Order-Functions-Self-Reference" class="headerlink" title="Disc 02: Highrt-Order Functions, Self Reference"></a>Disc 02: Highrt-Order Functions, Self Reference</h2><h2 id="Disc-03-Recursion"><a href="#Disc-03-Recursion" class="headerlink" title="Disc 03: Recursion"></a>Disc 03: Recursion</h2><h2 id="Disc-04-Python-lists-Tree-Recursion"><a href="#Disc-04-Python-lists-Tree-Recursion" class="headerlink" title="Disc 04: Python lists, Tree Recursion"></a>Disc 04: Python lists, Tree Recursion</h2><h2 id="Disc-05-Data-Abstraction-Trees-Mutability"><a href="#Disc-05-Data-Abstraction-Trees-Mutability" class="headerlink" title="Disc 05: Data Abstraction, Trees, Mutability"></a>Disc 05: Data Abstraction, Trees, Mutability</h2><h2 id="Disc-06-Nonlocal-Iterators-amp-Generators"><a href="#Disc-06-Nonlocal-Iterators-amp-Generators" class="headerlink" title="Disc 06: Nonlocal, Iterators &amp; Generators"></a>Disc 06: Nonlocal, Iterators &amp; Generators</h2><h2 id="Disc-07-Object-Oriented-Programming-Linked-Lists"><a href="#Disc-07-Object-Oriented-Programming-Linked-Lists" class="headerlink" title="Disc 07: Object-Oriented Programming, Linked Lists"></a>Disc 07: Object-Oriented Programming, Linked Lists</h2><h2 id="Supplemental-Disc-08-Efficiency"><a href="#Supplemental-Disc-08-Efficiency" class="headerlink" title="Supplemental Disc 08: Efficiency"></a>Supplemental Disc 08: Efficiency</h2><h2 id="Disc-09-Scheme"><a href="#Disc-09-Scheme" class="headerlink" title="Disc 09: Scheme"></a>Disc 09: Scheme</h2><h2 id="Disc-10-Interpreters"><a href="#Disc-10-Interpreters" class="headerlink" title="Disc 10: Interpreters"></a>Disc 10: Interpreters</h2><h2 id="Disc-11-SQL"><a href="#Disc-11-SQL" class="headerlink" title="Disc 11: SQL"></a>Disc 11: SQL</h2><h2 id="Disc-12-Final-Review"><a href="#Disc-12-Final-Review" class="headerlink" title="Disc 12: Final Review"></a>Disc 12: Final Review</h2><hr><h1 id="HW"><a href="#HW" class="headerlink" title="HW"></a>HW</h1><h2 id="HW-01"><a href="#HW-01" class="headerlink" title="HW 01"></a>HW 01</h2><h2 id="HW-02"><a href="#HW-02" class="headerlink" title="HW 02"></a>HW 02</h2><h2 id="HW-03"><a href="#HW-03" class="headerlink" title="HW 03"></a>HW 03</h2><h2 id="HW-04"><a href="#HW-04" class="headerlink" title="HW 04"></a>HW 04</h2><h2 id="HW-05"><a href="#HW-05" class="headerlink" title="HW 05"></a>HW 05</h2><h2 id="HW-06"><a href="#HW-06" class="headerlink" title="HW 06"></a>HW 06</h2><h2 id="HW-07"><a href="#HW-07" class="headerlink" title="HW 07"></a>HW 07</h2><h2 id="HW-08"><a href="#HW-08" class="headerlink" title="HW 08"></a>HW 08</h2><h2 id="HW-09"><a href="#HW-09" class="headerlink" title="HW 09"></a>HW 09</h2><h2 id="HW-10"><a href="#HW-10" class="headerlink" title="HW 10"></a>HW 10</h2><hr><h1 id="Projects"><a href="#Projects" class="headerlink" title="Projects"></a>Projects</h1><h2 id="Hog"><a href="#Hog" class="headerlink" title="Hog"></a>Hog</h2><h2 id="Hog-Contest"><a href="#Hog-Contest" class="headerlink" title="Hog Contest"></a>Hog Contest</h2><h2 id="Cats"><a href="#Cats" class="headerlink" title="Cats"></a>Cats</h2><h2 id="Ants"><a href="#Ants" class="headerlink" title="Ants"></a>Ants</h2><h2 id="Scheme"><a href="#Scheme" class="headerlink" title="Scheme"></a>Scheme</h2><h2 id="Scheme-Contest"><a href="#Scheme-Contest" class="headerlink" title="Scheme Contest"></a>Scheme Contest</h2><hr><h1 id="Guerrilla"><a href="#Guerrilla" class="headerlink" title="Guerrilla"></a>Guerrilla</h1><h2 id="Guerrilla-00-Higher-Order-Functions-Environment-Diagrams-Control"><a href="#Guerrilla-00-Higher-Order-Functions-Environment-Diagrams-Control" class="headerlink" title="Guerrilla 00: Higher-Order Functions, Environment Diagrams, Control"></a>Guerrilla 00: Higher-Order Functions, Environment Diagrams, Control</h2><h2 id="Guerrilla-01-Python-Lists-Recursion-Tree-Recursion"><a href="#Guerrilla-01-Python-Lists-Recursion-Tree-Recursion" class="headerlink" title="Guerrilla 01: Python Lists, Recursion, Tree Recursion"></a>Guerrilla 01: Python Lists, Recursion, Tree Recursion</h2><h2 id="Guerrilla-02-Data-Abstraction-Trees-Nonlocal-Iterators-amp-Generators"><a href="#Guerrilla-02-Data-Abstraction-Trees-Nonlocal-Iterators-amp-Generators" class="headerlink" title="Guerrilla 02: Data Abstraction, Trees, Nonlocal, Iterators &amp; Generators"></a>Guerrilla 02: Data Abstraction, Trees, Nonlocal, Iterators &amp; Generators</h2><h2 id="Guerrilla-03-Linked-Lists-Object-Oriented-Programming"><a href="#Guerrilla-03-Linked-Lists-Object-Oriented-Programming" class="headerlink" title="Guerrilla 03: Linked Lists, Object-Oriented Programming"></a>Guerrilla 03: Linked Lists, Object-Oriented Programming</h2><h2 id="Guerrilla-04-Scheme-Interpreters"><a href="#Guerrilla-04-Scheme-Interpreters" class="headerlink" title="Guerrilla 04: Scheme, Interpreters"></a>Guerrilla 04: Scheme, Interpreters</h2><h2 id="Guerrilla-05-SQL"><a href="#Guerrilla-05-SQL" class="headerlink" title="Guerrilla 05: SQL"></a>Guerrilla 05: SQL</h2><hr><h1 id="Textbook"><a href="#Textbook" class="headerlink" title="Textbook"></a>Textbook</h1><h2 id="Chapter-1-Building-Abstractions-with-Functions"><a href="#Chapter-1-Building-Abstractions-with-Functions" class="headerlink" title="Chapter 1: Building Abstractions with Functions"></a>Chapter 1: Building Abstractions with Functions</h2><h3 id="1-1-Getting-Started"><a href="#1-1-Getting-Started" class="headerlink" title="1.1 Getting Started"></a>1.1 Getting Started</h3><p>All computing begins with representing information, specifying logic to process it, and designing abstractions that manage the complexity of that logic. Mastering these fundamentals will require us to understand precisely how computers interpret computer programs and carry out computational processes.</p><p>Structure and Interpretation of Computer Programs (SICP) by Harold Abelson and Gerald Jay Sussman with Julie Sussman</p><h4 id="1-1-1-Programming-in-Python"><a href="#1-1-1-Programming-in-Python" class="headerlink" title="1.1.1 Programming in Python"></a>1.1.1 Programming in Python</h4><p>The language was conceived and first implemented by Guido van Rossum in the late 1980’s. The first chapter of his Python 3 Tutorial explains why Python is so popular</p><p>python3 tutorial<br><a href="https://docs.python.org/3/tutorial/appetite.html">https://docs.python.org/3/tutorial/appetite.html</a></p><p>zen of python<br><a href="https://www.python.org/dev/peps/pep-0020/">https://www.python.org/dev/peps/pep-0020/</a></p><p>on-going projects<br><a href="https://pypi.org/">https://pypi.org/</a></p><h4 id="1-1-2-Installing-Python-3"><a href="#1-1-2-Installing-Python-3" class="headerlink" title="1.1.2 Installing Python 3"></a>1.1.2 Installing Python 3</h4><h4 id="1-1-3-Interactive-Sessions"><a href="#1-1-3-Interactive-Sessions" class="headerlink" title="1.1.3 Interactive Sessions"></a>1.1.3 Interactive Sessions</h4><p>Interactive controls. Each session keeps a history of what you have typed. To access that history, press <Control>-P (previous) and <Control>-N (next). <Control>-D exits a session, which discards this history. Up and down arrows also cycle through history on some systems.</p><h4 id="1-1-4-First-Examples"><a href="#1-1-4-First-Examples" class="headerlink" title="1.1.4 First Examples"></a>1.1.4 First Examples</h4><p><strong>Statements &amp; Expressions</strong>. Python code consists of expressions and statements. Broadly, computer programs consist of instructions to either</p><p>Compute some value<br>Carry out some action<br>Statements typically describe actions. When the Python interpreter executes a statement, it carries out the corresponding action. On the other hand, expressions typically describe computations. When Python evaluates an expression, it computes the value of that expression. This chapter introduces several types of statements and expressions.</p><p><strong>Functions.</strong> Functions encapsulate logic that manipulates data.</p><p><strong>Objects</strong> An object seamlessly bundles together data and the logic that manipulates that data, in a way that manages the complexity of both</p><p>**Interpreters.**Evaluating compound expressions requires a precise procedure that interprets code in a predictable way. A program that implements such a procedure, evaluating compound expressions, is called an interpreter. </p><p> functions are objects, objects are functions, and interpreters are instances of both.</p><h4 id="1-1-5-Errors"><a href="#1-1-5-Errors" class="headerlink" title="1.1.5 Errors"></a>1.1.5 Errors</h4><p>Learning to interpret errors and diagnose the cause of unexpected errors is called debugging. Some guiding principles of debugging are:</p><ol><li>Test incrementally: Every well-written program is composed of small, modular components that can be tested individually. Try out everything you write as soon as possible to identify problems early and gain confidence in your components.</li><li>Isolate errors: An error in the output of a statement can typically be attributed to a particular modular component. When trying to diagnose a problem, trace the error to the smallest fragment of code you can before trying to correct it.</li><li>Check your assumptions: Interpreters do carry out your instructions to the letter — no more and no less. Their output is unexpected when the behavior of some code does not match what the programmer believes (or assumes) that behavior to be. Know your assumptions, then focus your debugging effort on verifying that your assumptions actually hold.</li><li>Consult others: You are not alone! If you don’t understand an error message, ask a friend, instructor, or search engine. If you have isolated an error, but can’t figure out how to correct it, ask someone else to take a look. A lot of valuable programming knowledge is shared in the process of group problem solving.<br>Incremental testing, modular design, precise assumptions, and teamwork are themes that persist throughout this te  xt. Hopefully, they will also persist throughout your computer science career.</li></ol><h3 id="1-2-Elements-of-Programming"><a href="#1-2-Elements-of-Programming" class="headerlink" title="1.2 Elements of Programming"></a>1.2 Elements of Programming</h3><p>The language also serves as a framework within which we organize our ideas about computational processes.</p><p>programs must be written for people to read, and only incidentally for machines to execute.</p><p>the means that the language provides for combining simple ideas to form more complex ideas. Every powerful language has three such mechanisms:</p><ul><li><strong>primitive expressions and statements</strong>, which represent the simplest building blocks that the language provides,</li><li><strong>means of combination</strong>, by which compound elements are built from simpler ones, and</li><li><strong>means of abstraction</strong>, by which compound elements can be named and manipulated as units.</li></ul><p>In programming, we deal with two kinds of elements: functions and data.</p><p>Informally, data is stuff that we want to manipulate, and functions describe the rules for manipulating the data. Thus, any powerful programming language should be able to describe primitive data and primitive functions, as well as have some methods for combining and abstracting both functions and data.</p><h4 id="1-2-1-Expressions"><a href="#1-2-1-Expressions" class="headerlink" title="1.2.1  Expressions"></a>1.2.1  Expressions</h4><p> <em>infix notation</em>, where the operator (e.g., +, -, *, or /) appears in between the operands (numbers)</p><h4 id="1-2-2-Call-Expressions"><a href="#1-2-2-Call-Expressions" class="headerlink" title="1.2.2 Call Expressions"></a>1.2.2 Call Expressions</h4><p><em>call expression</em>, which applies a function to some arguments.</p><p>This call expression has subexpressions: the operator is an expression that precedes parentheses, which enclose a comma-delimited list of operand expressions.</p><p>The operator specifies a function. </p><p>Function notation has three principal advantages over the mathematical convention of infix notation. First, functions may take an arbitrary number of arguments:No ambiguity can arise, because the function name always precedes its arguments.</p><p>Second, function notation extends in a straightforward way to <em>nested expressions</em>, where the elements are themselves compound expressions. In nested call expressions, unlike compound infix expressions, the structure of the nesting is entirely explicit in the parentheses.</p><p>Third, mathematical notation has a great variety of forms: multiplication appears between terms, exponents appear as superscripts, division as a horizontal bar, and a square root as a roof with slanted siding. Some of this notation is very hard to type! However, all of this complexity can be unified via the notation of call expressions. While Python supports common mathematical operators using infix notation (like + and -), any operator can be expressed as a function with a name.</p><p>The order of the arguments in a call expression matters.</p><h4 id="1-2-3-Importing-Library-Functions"><a href="#1-2-3-Importing-Library-Functions" class="headerlink" title="1.2.3 Importing Library Functions"></a>1.2.3 Importing Library Functions</h4><p>Python defines a very large number of functions, including the operator functions mentioned in the preceding section, but does not make all of their names available by default. Instead, it organizes the functions and other quantities that it knows about into modules, which together comprise the Python Library. To use these elements, one imports them.</p><p>An import statement designates a module name (e.g., operator or math), and then lists the named attributes of that module to import (e.g., sqrt). Once a function is imported, it can be called multiple times.</p><p>The Python 3 Library Docs list the functions defined by each module<br><a href="http://docs.python.org/py3k/library/index.html">http://docs.python.org/py3k/library/index.html</a></p><h4 id="1-2-4-Names-and-the-Environment"><a href="#1-2-4-Names-and-the-Environment" class="headerlink" title="1.2.4 Names and the Environment"></a>1.2.4 Names and the Environment</h4><p>If a value has been given a name, we say that the name binds to the value.</p><p>In Python, we can establish new bindings using the assignment statement, which contains a name to the left of = and a value to the right</p><p>Names are also bound via import statements.</p><p>The = symbol is called the assignment operator in Python (and many other languages). Assignment is our simplest means of abstraction, for it allows us to use simple names to refer to the results of compound operations</p><p>The possibility of binding names to values and later retrieving those values by name means that the interpreter must maintain some sort of memory that keeps track of the names, values, and bindings. This memory is called an environment.</p><p>Names can also be bound to functions.</p><p>In Python, names are often called variable names or variables because they can be bound to different values in the course of executing a program. When a name is bound to a new value through assignment, it is no longer bound to any previous value. One can even bind built-in names to new values.</p><h4 id="1-2-5-Evaluating-Nested-Expressions"><a href="#1-2-5-Evaluating-Nested-Expressions" class="headerlink" title="1.2.5 Evaluating Nested Expressions"></a>1.2.5 Evaluating Nested Expressions</h4><h4 id="1-2-6-The-Non-Pure-Print-Function"><a href="#1-2-6-The-Non-Pure-Print-Function" class="headerlink" title="1.2.6 The Non-Pure Print Function"></a>1.2.6 The Non-Pure Print Function</h4><p><strong>Pure Function</strong><br><strong>Non-Pure Function</strong></p><h3 id="1-3-Defining-New-Functions"><a href="#1-3-Defining-New-Functions" class="headerlink" title="1.3 Defining New Functions"></a>1.3 Defining New Functions</h3><h3 id="1-4-Designing-Functions"><a href="#1-4-Designing-Functions" class="headerlink" title="1.4 Designing Functions"></a>1.4 Designing Functions</h3><h3 id="1-5-Control"><a href="#1-5-Control" class="headerlink" title="1.5 Control"></a>1.5 Control</h3><h3 id="1-6-Higher-Order-Functions"><a href="#1-6-Higher-Order-Functions" class="headerlink" title="1.6 Higher-Order Functions"></a>1.6 Higher-Order Functions</h3><h3 id="1-7-Recursive-Functions"><a href="#1-7-Recursive-Functions" class="headerlink" title="1.7 Recursive Functions"></a>1.7 Recursive Functions</h3><h2 id="Chapter-2-Building-Abstractions-with-Data"><a href="#Chapter-2-Building-Abstractions-with-Data" class="headerlink" title="Chapter 2: Building Abstractions with Data"></a>Chapter 2: Building Abstractions with Data</h2><h3 id="2-1-Introduction"><a href="#2-1-Introduction" class="headerlink" title="2.1 Introduction"></a>2.1 Introduction</h3><h3 id="2-2-Data-Abstraction"><a href="#2-2-Data-Abstraction" class="headerlink" title="2.2 Data Abstraction"></a>2.2 Data Abstraction</h3><h3 id="2-3-Sequences"><a href="#2-3-Sequences" class="headerlink" title="2.3 Sequences"></a>2.3 Sequences</h3><h3 id="2-4-Mutable-Data"><a href="#2-4-Mutable-Data" class="headerlink" title="2.4 Mutable Data"></a>2.4 Mutable Data</h3><h3 id="2-5-Object-Oriented-Programming"><a href="#2-5-Object-Oriented-Programming" class="headerlink" title="2.5 Object-Oriented Programming"></a>2.5 Object-Oriented Programming</h3><h3 id="2-6-Implementing-Classes-and-Objects"><a href="#2-6-Implementing-Classes-and-Objects" class="headerlink" title="2.6 Implementing Classes and Objects"></a>2.6 Implementing Classes and Objects</h3><h3 id="2-7-Object-Abstraction"><a href="#2-7-Object-Abstraction" class="headerlink" title="2.7 Object Abstraction"></a>2.7 Object Abstraction</h3><h3 id="2-8-Efficiency"><a href="#2-8-Efficiency" class="headerlink" title="2.8 Efficiency"></a>2.8 Efficiency</h3><h3 id="2-9-Recursive-Objects"><a href="#2-9-Recursive-Objects" class="headerlink" title="2.9 Recursive Objects"></a>2.9 Recursive Objects</h3><h2 id="Chapter-3-Interpreting-Computer-Programs"><a href="#Chapter-3-Interpreting-Computer-Programs" class="headerlink" title="Chapter 3: Interpreting Computer Programs"></a>Chapter 3: Interpreting Computer Programs</h2><h3 id="3-1-Introduction"><a href="#3-1-Introduction" class="headerlink" title="3.1 Introduction"></a>3.1 Introduction</h3><h3 id="3-2-Functional-Programming"><a href="#3-2-Functional-Programming" class="headerlink" title="3.2 Functional Programming"></a>3.2 Functional Programming</h3><h3 id="3-3-Exceptions"><a href="#3-3-Exceptions" class="headerlink" title="3.3 Exceptions"></a>3.3 Exceptions</h3><h3 id="3-4-Interpreters-for-Languages-with-Combination"><a href="#3-4-Interpreters-for-Languages-with-Combination" class="headerlink" title="3.4 Interpreters for Languages with Combination"></a>3.4 Interpreters for Languages with Combination</h3><h3 id="3-5-Interpreters-for-Languages-with-Abstraction"><a href="#3-5-Interpreters-for-Languages-with-Abstraction" class="headerlink" title="3.5 Interpreters for Languages with Abstraction"></a>3.5 Interpreters for Languages with Abstraction</h3><h2 id="Chapter-4-Data-Processing"><a href="#Chapter-4-Data-Processing" class="headerlink" title="Chapter 4: Data Processing"></a>Chapter 4: Data Processing</h2><h3 id="4-1-Introduction"><a href="#4-1-Introduction" class="headerlink" title="4.1 Introduction"></a>4.1 Introduction</h3><h3 id="4-2-Implicit-Sequences"><a href="#4-2-Implicit-Sequences" class="headerlink" title="4.2 Implicit Sequences"></a>4.2 Implicit Sequences</h3><h3 id="4-3-Declarative-Programming"><a href="#4-3-Declarative-Programming" class="headerlink" title="4.3 Declarative Programming"></a>4.3 Declarative Programming</h3><h3 id="4-4-Logic-Programming"><a href="#4-4-Logic-Programming" class="headerlink" title="4.4 Logic Programming"></a>4.4 Logic Programming</h3><h3 id="4-5-Unification"><a href="#4-5-Unification" class="headerlink" title="4.5 Unification"></a>4.5 Unification</h3><h3 id="4-6-Distributed-Computing"><a href="#4-6-Distributed-Computing" class="headerlink" title="4.6 Distributed Computing"></a>4.6 Distributed Computing</h3><h3 id="4-7-Distributed-Data-Processing"><a href="#4-7-Distributed-Data-Processing" class="headerlink" title="4.7 Distributed Data Processing"></a>4.7 Distributed Data Processing</h3><h3 id="4-8-Parallel-Computing"><a href="#4-8-Parallel-Computing" class="headerlink" title="4.8 Parallel Computing"></a>4.8 Parallel Computing</h3>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Lectures&quot;&gt;&lt;a href=&quot;#Lectures&quot; class=&quot;headerlink&quot; title=&quot;Lectures&quot;&gt;&lt;/a&gt;Lectures&lt;/h1&gt;&lt;h2 id=&quot;1-Functions&quot;&gt;&lt;a href=&quot;#1-Functions&quot; class</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>vue crash course</title>
-    <link href="http://example.com/2021/10/26/vue-crash-course/"/>
-    <id>http://example.com/2021/10/26/vue-crash-course/</id>
-    <published>2021-10-26T06:57:35.000Z</published>
-    <updated>2021-10-27T02:19:23.731Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Links"><a href="#Links" class="headerlink" title="Links"></a>Links</h1><p><a href="https://www.youtube.com/watch?v=qZXt1Aom3Cs&amp;t=4955s">https://www.youtube.com/watch?v=qZXt1Aom3Cs&amp;t=4955s</a></p><h1 id="What-is-Vue"><a href="#What-is-Vue" class="headerlink" title="What is Vue?"></a>What is Vue?</h1><p>Vue is a frontend JavaScript framework for building websites &amp; user interfaces</p><ul><li>vue is generally used to create single-page apps that run on the client, but can be used to create full stack applications by making HTTP requests to a backend server. Vue is popular with Node.js &amp; Express(MEVN Stack)</li><li>Vue can also run on the server-side by using a SSR framework like Nuxt</li></ul><h1 id="Why-Use-Vue"><a href="#Why-Use-Vue" class="headerlink" title="Why Use Vue?"></a>Why Use Vue?</h1><ul><li>create dynamic frontendapps &amp; websites</li><li>Easy learning curve</li><li>Easy to integrate with other projects</li><li>Fast &amp; lightweight</li><li>Virtual DOM</li><li>Extremely popular (and rising)</li><li>Great community</li></ul><h1 id="Basic-Layout-of-a-Vue-Component"><a href="#Basic-Layout-of-a-Vue-Component" class="headerlink" title="Basic Layout of a Vue Component"></a>Basic Layout of a Vue Component</h1><p>Components include a template for markup, logic including any state/data/methods as well as the styling for that component</p><p>You can also pass “props” into a component</p><p><code>&lt;Header title=&quot;Task Tracker&quot; /&gt;</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;header&gt;</span><br><span class="line">        &lt;h1&gt;&#123;&#123;title&#125;&#125;&lt;/h1&gt;</span><br><span class="line">    &lt;/header&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">    export default &#123;</span><br><span class="line">        props: &#123;</span><br><span class="line">            title: String,</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">    header &#123;</span><br><span class="line">        display: flex;</span><br><span class="line">        justify-content: space-between;</span><br><span class="line">        align-items: center;</span><br><span class="line">        margin-bottom: 20px;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure><h1 id="Working-With-State-Data"><a href="#Working-With-State-Data" class="headerlink" title="Working With State / Data"></a>Working With State / Data</h1><p>Components can have their own state which can determine how a specific component behaves and what data is displayed</p><p>Some state may be local to a specific component and some may be “global” or “app” level state that needs to be shared with multiple components</p><p>Vue is a state manager for global statein larger applications</p><h1 id="Vue-CLI"><a href="#Vue-CLI" class="headerlink" title="Vue CLI"></a>Vue CLI</h1><p>Standard tooling for Vue.js development</p><ul><li>Command line interface for creating Vue apps</li><li>Dev server and easy production build</li><li>Optional GUI for managing Vue projects</li><li>Integrated testing, TypeScript support, ESLint &amp; more<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br><span class="line"># OR</span><br><span class="line">yarn global add @vue/cli</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vue  create my-project</span><br><span class="line"># OR</span><br><span class="line">vue ui</span><br></pre></td></tr></table></figure></li></ul><p>v3.vuejs.org</p><p><a href="https://unpkg.com/vue@next">https://unpkg.com/vue@next</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Links&quot;&gt;&lt;a href=&quot;#Links&quot; class=&quot;headerlink&quot; title=&quot;Links&quot;&gt;&lt;/a&gt;Links&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=qZXt1Aom3Cs&amp;amp;t</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>hexo blog</title>
-    <link href="http://example.com/2021/10/24/hexo-blog/"/>
-    <id>http://example.com/2021/10/24/hexo-blog/</id>
-    <published>2021-10-25T02:27:01.000Z</published>
-    <updated>2021-10-25T02:57:57.254Z</updated>
-    
-    <content type="html"><![CDATA[<p>Useful links<br><a href="https://zhuanlan.zhihu.com/p/35668237">https://zhuanlan.zhihu.com/p/35668237</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Useful links&lt;br&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/35668237&quot;&gt;https://zhuanlan.zhihu.com/p/35668237&lt;/a&gt;&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>on-premise deployment machine prep</title>
-    <link href="http://example.com/2021/10/21/on-premise-deployment-machine-prep/"/>
-    <id>http://example.com/2021/10/21/on-premise-deployment-machine-prep/</id>
-    <published>2021-10-21T05:33:52.000Z</published>
-    <updated>2021-10-25T02:25:26.977Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="On-Premise-Deployment-Machine-Prep"><a href="#On-Premise-Deployment-Machine-Prep" class="headerlink" title="On-Premise Deployment Machine Prep"></a>On-Premise Deployment Machine Prep</h1><h2 id="1-Re-image-the-system"><a href="#1-Re-image-the-system" class="headerlink" title="1. Re-image the system"></a>1. Re-image the system</h2><h3 id="1-1-Prepare-the-bootable-USB"><a href="#1-1-Prepare-the-bootable-USB" class="headerlink" title="1.1 Prepare the bootable USB"></a>1.1 Prepare the bootable USB</h3><p><a href="https://ubuntu.com/download/desktop">https://ubuntu.com/download/desktop</a><br>download Ubuntu 20.04.3 LTS</p><p>note that the server version does not have GUI</p><p>use Rufus to make the drive<br><a href="https://ubuntu.com/tutorials/create-a-usb-stick-on-windows#1-overview">https://ubuntu.com/tutorials/create-a-usb-stick-on-windows#1-overview</a></p><p>tap F11 to enter boot menu to boot from USB</p><p>if stuck on Read package list, it probably already finished installing</p><h2 id="2-Prepare-the-ubuntu-for-install"><a href="#2-Prepare-the-ubuntu-for-install" class="headerlink" title="2. Prepare the ubuntu for install"></a>2. Prepare the ubuntu for install</h2><h3 id="2-1-install-myssh"><a href="#2-1-install-myssh" class="headerlink" title="2.1 install myssh"></a>2.1 install myssh</h3><p><a href="https://www.cyberciti.biz/faq/ubuntu-linux-install-openssh-server/">https://www.cyberciti.biz/faq/ubuntu-linux-install-openssh-server/</a></p><p><a href="https://linuxconfig.org/how-to-find-my-ip-address-on-ubuntu-20-04-focal-fossa-linux">https://linuxconfig.org/how-to-find-my-ip-address-on-ubuntu-20-04-focal-fossa-linux</a><br>ip r </p><h3 id="2-2-Install-docker-and-kubernetes"><a href="#2-2-Install-docker-and-kubernetes" class="headerlink" title="2.2 Install docker and kubernetes"></a>2.2 Install docker and kubernetes</h3><p>disable swap<br>sudo swapoff -a<br><a href="https://phoenixnap.com/kb/install-kubernetes-on-ubuntu">https://phoenixnap.com/kb/install-kubernetes-on-ubuntu</a></p><p>if you are in China<br><a href="https://www.cnblogs.com/leisurelylicht/p/Ubuntu-guo-nei-an-zhuang-kubernetes.html">https://www.cnblogs.com/leisurelylicht/p/Ubuntu-guo-nei-an-zhuang-kubernetes.html</a></p><p><a href="https://www.jianshu.com/p/f2d4dd4d1fb1">https://www.jianshu.com/p/f2d4dd4d1fb1</a></p><h3 id="2-3-Configure-the-k8s-to-make-node"><a href="#2-3-Configure-the-k8s-to-make-node" class="headerlink" title="2.3 Configure the k8s to make node"></a>2.3 Configure the k8s to make node</h3><p>docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/kube-apiserver:v1.22.2</p><h1 id="shell-scripts-for-using-aliyuncs-to-bypass-google"><a href="#shell-scripts-for-using-aliyuncs-to-bypass-google" class="headerlink" title="shell scripts for using aliyuncs to bypass google"></a>shell scripts for using aliyuncs to bypass google</h1><figure class="highlight docker"><figcaption><span>login --username</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>images=(<br>kube-apiserver:v1.22.2<br>kube-controller-manager:v1.22.2<br>kube-scheduler:v1.22.2<br>kube-proxy:v1.22.2<br>pause:3.5<br>etcd:3.5.0-0<br>coredns:v1.8.4<br>)<br>for imageName in ${images[@]} ; do<br>    echo $imageName<br>    docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/$imageName<br>    echo “pulled”<br>    docker tag registry.cn-hangzhou.aliyuncs.com/google_containers/$imageName  k8s.gcr.io/$imageName<br>    echo “tagged”<br>    docker rmi registry.cn-hangzhou.aliyuncs.com/google_containers/$imageName<br>    echo “removed”<br>done</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">docker tag registry.cn-hangzhou.aliyuncs.com/coredns:v1.8.4 google_containers/coredns/coredns:v1.8.4</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubeadm token create --print-join-command</span><br></pre></td></tr></table></figure><p><a href="https://www.padok.fr/en/blog/kubeadm-kubernetes-cluster">https://www.padok.fr/en/blog/kubeadm-kubernetes-cluster</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;On-Premise-Deployment-Machine-Prep&quot;&gt;&lt;a href=&quot;#On-Premise-Deployment-Machine-Prep&quot; class=&quot;headerlink&quot; title=&quot;On-Premise Deployment Ma</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>test_article0</title>
-    <link href="http://example.com/2021/09/09/test-article0/"/>
-    <id>http://example.com/2021/09/09/test-article0/</id>
-    <published>2021-09-09T08:17:16.000Z</published>
-    <updated>2021-09-09T08:17:16.777Z</updated>
+    <title>Advanced Algorithm 4 - offline</title>
+    <link href="http://example.com/2022/08/18/Advanced-Algorithm-4-offline/"/>
+    <id>http://example.com/2022/08/18/Advanced-Algorithm-4-offline/</id>
+    <published>2022-08-19T00:44:34.000Z</published>
+    <updated>2022-08-19T00:44:34.684Z</updated>
     
     
     
@@ -174,19 +30,246 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://example.com/2021/09/09/hello-world/"/>
-    <id>http://example.com/2021/09/09/hello-world/</id>
-    <published>2021-09-09T07:45:37.128Z</published>
-    <updated>2021-09-09T07:45:37.128Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <title>Advanced Algorithm 3 - Reservoir Sampling</title>
+    <link href="http://example.com/2022/08/18/Advanced-Algorithm-3-Reservoir-Sampling/"/>
+    <id>http://example.com/2022/08/18/Advanced-Algorithm-3-Reservoir-Sampling/</id>
+    <published>2022-08-19T00:44:28.000Z</published>
+    <updated>2022-08-19T00:44:28.168Z</updated>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
-      
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Advanced Algorithm 2 - Bit Manipulation</title>
+    <link href="http://example.com/2022/08/18/Advanced-Algorithm-2-Bit-Manipulation/"/>
+    <id>http://example.com/2022/08/18/Advanced-Algorithm-2-Bit-Manipulation/</id>
+    <published>2022-08-19T00:44:15.000Z</published>
+    <updated>2022-08-19T00:44:15.638Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Advanced Algorithm 1 - Rolling Hash</title>
+    <link href="http://example.com/2022/08/18/Advanced-Algorithm-1-Rolling-Hash/"/>
+    <id>http://example.com/2022/08/18/Advanced-Algorithm-1-Rolling-Hash/</id>
+    <published>2022-08-19T00:44:05.000Z</published>
+    <updated>2022-08-19T00:44:05.860Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>OOD 3 - Design an elevator</title>
+    <link href="http://example.com/2022/08/18/OOD-3-Design-an-elevator/"/>
+    <id>http://example.com/2022/08/18/OOD-3-Design-an-elevator/</id>
+    <published>2022-08-19T00:43:49.000Z</published>
+    <updated>2022-08-19T00:43:49.036Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>OOD 2 - Design a parking lot</title>
+    <link href="http://example.com/2022/08/18/OOD-2-Design-a-parking-lot/"/>
+    <id>http://example.com/2022/08/18/OOD-2-Design-a-parking-lot/</id>
+    <published>2022-08-19T00:43:40.000Z</published>
+    <updated>2022-08-19T00:43:40.613Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>OOD 1 - Basic Concept</title>
+    <link href="http://example.com/2022/08/18/OOD-1-Basic-Concept/"/>
+    <id>http://example.com/2022/08/18/OOD-1-Basic-Concept/</id>
+    <published>2022-08-19T00:43:32.000Z</published>
+    <updated>2022-08-19T00:43:32.224Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>classic problem 8 - palindrome</title>
+    <link href="http://example.com/2022/08/18/classic-problem-8-palindrome/"/>
+    <id>http://example.com/2022/08/18/classic-problem-8-palindrome/</id>
+    <published>2022-08-19T00:43:19.000Z</published>
+    <updated>2022-08-19T00:43:19.786Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>classic problem 7 - two sum</title>
+    <link href="http://example.com/2022/08/18/classic-problem-7-two-sum/"/>
+    <id>http://example.com/2022/08/18/classic-problem-7-two-sum/</id>
+    <published>2022-08-19T00:43:00.000Z</published>
+    <updated>2022-08-19T00:43:00.111Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>classic problem 6 - Parentheses</title>
+    <link href="http://example.com/2022/08/18/classic-problem-6-Parentheses/"/>
+    <id>http://example.com/2022/08/18/classic-problem-6-Parentheses/</id>
+    <published>2022-08-19T00:42:50.000Z</published>
+    <updated>2022-08-19T00:42:50.980Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>classic problem 5 - Jump Game</title>
+    <link href="http://example.com/2022/08/18/classic-problem-5-Jump-Game/"/>
+    <id>http://example.com/2022/08/18/classic-problem-5-Jump-Game/</id>
+    <published>2022-08-19T00:42:41.000Z</published>
+    <updated>2022-08-19T00:42:41.996Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>classic problem 4 - Sell Stock</title>
+    <link href="http://example.com/2022/08/18/classic-problem-4-Sell-Stock/"/>
+    <id>http://example.com/2022/08/18/classic-problem-4-Sell-Stock/</id>
+    <published>2022-08-19T00:42:35.000Z</published>
+    <updated>2022-08-19T00:42:35.454Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>classic problem 3 - TopK</title>
+    <link href="http://example.com/2022/08/18/classic-problem-3-TopK/"/>
+    <id>http://example.com/2022/08/18/classic-problem-3-TopK/</id>
+    <published>2022-08-19T00:42:28.000Z</published>
+    <updated>2022-08-19T00:42:28.035Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>classic problem 2 - number of island</title>
+    <link href="http://example.com/2022/08/18/classic-problem-2-number-of-island/"/>
+    <id>http://example.com/2022/08/18/classic-problem-2-number-of-island/</id>
+    <published>2022-08-19T00:42:22.000Z</published>
+    <updated>2022-08-19T00:42:22.439Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>classic problem 1 - calculator</title>
+    <link href="http://example.com/2022/08/18/classic-problem-1-calculator/"/>
+    <id>http://example.com/2022/08/18/classic-problem-1-calculator/</id>
+    <published>2022-08-19T00:42:14.000Z</published>
+    <updated>2022-08-19T00:42:14.835Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>classic problem 0 - robber</title>
+    <link href="http://example.com/2022/08/18/classic-problem-0-robber/"/>
+    <id>http://example.com/2022/08/18/classic-problem-0-robber/</id>
+    <published>2022-08-19T00:42:06.000Z</published>
+    <updated>2022-08-19T00:42:06.436Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Dynamic Programming 8 - state compression</title>
+    <link href="http://example.com/2022/08/18/Dynamic-Programming-8-state-compression/"/>
+    <id>http://example.com/2022/08/18/Dynamic-Programming-8-state-compression/</id>
+    <published>2022-08-19T00:41:44.000Z</published>
+    <updated>2022-08-19T00:41:44.911Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Dynamic Programming 7 - coordinates</title>
+    <link href="http://example.com/2022/08/18/Dynamic-Programming-7-coordinates/"/>
+    <id>http://example.com/2022/08/18/Dynamic-Programming-7-coordinates/</id>
+    <published>2022-08-19T00:41:37.000Z</published>
+    <updated>2022-08-19T00:41:38.001Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Dynamic Programming 6 - triangle</title>
+    <link href="http://example.com/2022/08/18/Dynamic-Programming-6-triangle/"/>
+    <id>http://example.com/2022/08/18/Dynamic-Programming-6-triangle/</id>
+    <published>2022-08-19T00:41:31.000Z</published>
+    <updated>2022-08-19T00:41:31.944Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Dynamic Programming 5 - interval</title>
+    <link href="http://example.com/2022/08/18/Dynamic-Programming-5-interval/"/>
+    <id>http://example.com/2022/08/18/Dynamic-Programming-5-interval/</id>
+    <published>2022-08-19T00:41:25.000Z</published>
+    <updated>2022-08-19T00:41:25.709Z</updated>
+    
     
     
     
