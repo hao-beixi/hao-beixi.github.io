@@ -465,7 +465,10 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="BFS"><a href="#BFS" class="headerlink" title="BFS"></a>BFS</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">procedure BFS(G, V):</span><br><span class="line">    create a queue Q</span><br><span class="line">    enqueue v onto Q</span><br><span class="line">    mark V</span><br><span class="line">    <span class="keyword">while</span> Q <span class="keyword">is</span> <span class="keyword">not</span> empty:</span><br><span class="line">        t &lt;- Q.dequeue()</span><br><span class="line">        <span class="keyword">if</span> t <span class="keyword">is</span> what we are looking <span class="keyword">for</span>:</span><br><span class="line">            <span class="keyword">return</span> t</span><br><span class="line">        <span class="keyword">for</span> <span class="built_in">all</span> edges e <span class="keyword">in</span> G.adjacentEdges(t) do</span><br><span class="line">            u &lt;- G.adjacentVertex(t, e)</span><br><span class="line">            <span class="keyword">if</span> u <span class="keyword">is</span> <span class="keyword">not</span> marked:</span><br><span class="line">                mark u</span><br><span class="line">                enqueue u onto Q</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">BFS</span><span class="params">(Node start, Node target)</span> </span>&#123;</span><br><span class="line">    Queue&lt;Node&gt; q; <span class="comment">// core data structure</span></span><br><span class="line">    Set&lt;Node&gt; visited; <span class="comment">// avoid going backward</span></span><br><span class="line"></span><br><span class="line">    q.offer(start); <span class="comment">// add start in the queue</span></span><br><span class="line">    visited.add(start);</span><br><span class="line">    <span class="keyword">int</span> step = <span class="number">0</span>;  <span class="comment">// record the steps</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (q not empty) &#123;</span><br><span class="line">        <span class="keyword">int</span> sz = q.size();</span><br><span class="line">        <span class="comment">// spread the current nodes in the queue to the surrounding</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; sz; i++) &#123;</span><br><span class="line">            Node cur = q.poll();</span><br><span class="line">            <span class="comment">// here we check if we reached target or not</span></span><br><span class="line">            <span class="keyword">if</span> (cur is target)</span><br><span class="line">                <span class="keyword">return</span> step;</span><br><span class="line">            <span class="comment">// add cur&#x27;s neighbors to the queue</span></span><br><span class="line">            <span class="keyword">for</span> (Node x : cur.adj())</span><br><span class="line">                <span class="keyword">if</span> (x not in visited) &#123;</span><br><span class="line">                    q.offer(x);</span><br><span class="line">                    visited.add(x);</span><br><span class="line">                &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// update steps</span></span><br><span class="line">        step++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
                 
             </div>
             <hr/>
@@ -700,13 +703,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2022/08/18/Leetcode-SpeedRun-3/">
+                <a href="/2022/08/18/Basic-Data-Structure-1-Trie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Leetcode SpeedRun 3">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Basic Data Structure 1 - Trie">
                         
-                        <span class="card-title">Leetcode SpeedRun 3</span>
+                        <span class="card-title">Basic Data Structure 1 - Trie</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -737,13 +740,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/08/18/Leetcode-SpeedRun-1/">
+                <a href="/2022/08/18/Leetcode-SpeedRun-0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Leetcode SpeedRun 1">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Leetcode SpeedRun 0">
                         
-                        <span class="card-title">Leetcode SpeedRun 1</span>
+                        <span class="card-title">Leetcode SpeedRun 0</span>
                     </div>
                 </a>
                 <div class="card-content article-content">

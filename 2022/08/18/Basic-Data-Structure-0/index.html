@@ -465,7 +465,143 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <ul>
+<li>Array </li>
+<li>String</li>
+</ul>
+<p><strong>- Linked List</strong><br><strong>- Tree</strong></p>
+<ul>
+<li>Trie</li>
+</ul>
+<p><strong>- Stack</strong><br><strong>- Queue</strong></p>
+<ul>
+<li>Deque</li>
+</ul>
+<p><strong>- PiorityQueue (Heap)</strong><br><strong>- Hash</strong>Map</p>
+<ul>
+<li>HashSet</li>
+<li>TreeMap</li>
+<li>TreeSet</li>
+<li>Disjoint-Set (Union Find)</li>
+</ul>
+<p><strong>- Graph</strong></p>
+<ul>
+<li>Segment Tree (zkw Tree)</li>
+<li>Binary Index Tree (Fenwick Tree)</li>
+</ul>
+<h3 id="Frequently-Tested-（70-）"><a href="#Frequently-Tested-（70-）" class="headerlink" title="Frequently Tested （70%）"></a>Frequently Tested （70%）</h3><ul>
+<li>array</li>
+<li>string (non-primitive data type)</li>
+<li>linked list</li>
+<li>tree (BT, BST)</li>
+<li>stcak</li>
+<li>queue</li>
+<li>piorityqueue(heap)</li>
+<li>hashMap</li>
+<li>hashSet</li>
+<li>Trie</li>
+</ul>
+<h3 id="Seldom-Seen-（30-）"><a href="#Seldom-Seen-（30-）" class="headerlink" title="Seldom Seen （30%）"></a>Seldom Seen （30%）</h3><ul>
+<li>disjoint-set(union find)</li>
+<li>deque</li>
+<li>graph</li>
+</ul>
+<h3 id="Not-tested-but-used-to-fasten-solution"><a href="#Not-tested-but-used-to-fasten-solution" class="headerlink" title="Not tested, but used to fasten solution"></a>Not tested, but used to fasten solution</h3><ul>
+<li>treemap</li>
+<li>treeset</li>
+<li>segment tree(zkw tree)</li>
+<li>binary index tree (fenwick tree)</li>
+</ul>
+<h1 id="1-Array"><a href="#1-Array" class="headerlink" title="1 Array"></a>1 Array</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] nums = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">100</span>];</span><br><span class="line">nums[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">nums[index] <span class="comment">// O(1)</span></span><br></pre></td></tr></table></figure>
+<h1 id="2-String"><a href="#2-String" class="headerlink" title="2 String"></a>2 String</h1><p>non-primitive data type</p>
+<h3 id="primitive-data-type"><a href="#primitive-data-type" class="headerlink" title="primitive data type"></a>primitive data type</h3><ul>
+<li>boolean</li>
+<li>int</li>
+<li>char</li>
+<li>double</li>
+<li>long</li>
+<li>byte</li>
+<li>short</li>
+<li>float</li>
+</ul>
+<h3 id="non-primitive-data-type"><a href="#non-primitive-data-type" class="headerlink" title="non-primitive data type"></a>non-primitive data type</h3><ul>
+<li>string</li>
+<li>arrays</li>
+<li>classes</li>
+<li>interfaces</li>
+</ul>
+<p>String is a sequence of characters. But in Java, a string is an object that represents a sequence of characters. The java.lang.String class is used to create a string object.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 2 String</span></span><br><span class="line">String str = <span class="keyword">new</span> String(<span class="string">&quot;hi&quot;</span>);</span><br><span class="line">str = <span class="keyword">new</span> String(<span class="keyword">new</span> <span class="keyword">char</span>[]&#123;<span class="string">&#x27;h&#x27;</span>, <span class="string">&#x27;i&#x27;</span>&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">str.substring();</span><br><span class="line">str.charAt(index);</span><br><span class="line">str1.compareTo(str2);</span><br></pre></td></tr></table></figure>
+<h1 id="3-Linked-List"><a href="#3-Linked-List" class="headerlink" title="3 Linked List"></a>3 Linked List</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ListNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    ListNode next;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ListNode</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.val = val;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ListNode head = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">hea.next = <span class="keyword">new</span> ListNode(<span class="number">1</span>);</span><br><span class="line">head.val</span><br></pre></td></tr></table></figure>
+<h1 id="4-Tree"><a href="#4-Tree" class="headerlink" title="4 Tree"></a>4 Tree</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    TreeNode left;</span><br><span class="line">    TreeNode right;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TreeNode</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.val = val;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">TreeNode root = <span class="keyword">new</span> TreeNode(<span class="number">0</span>);</span><br><span class="line">root.left = <span class="keyword">new</span> TreeNode(<span class="number">1</span>);</span><br><span class="line">root.right = <span class="keyword">new</span> TreeNode(<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+
+<h1 id="5-Trie-try-Prefix-Tree"><a href="#5-Trie-try-Prefix-Tree" class="headerlink" title="5 Trie(try) / Prefix Tree"></a>5 Trie(try) / Prefix Tree</h1><p>Trie is a N-array Tree</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TrieNode</span> </span>&#123;</span><br><span class="line">    TrieNode[] children;</span><br><span class="line">    <span class="keyword">boolean</span> isWord;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TrieNode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        children = <span class="keyword">new</span> TrieNode[<span class="number">26</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">addWord()</span><br><span class="line">searchWord()</span><br><span class="line">searchPrefix()</span><br></pre></td></tr></table></figure>
+<p>O(word.length)</p>
+<h1 id="6-Stack"><a href="#6-Stack" class="headerlink" title="6 Stack"></a>6 Stack</h1><p>LIFO - Last in first out<br>FILO - first in last out</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Deque&lt;Integer&gt; stack = <span class="keyword">new</span> ArrayDeque&lt;Integer&gt;();</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Stack&lt;Integer&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">stack.push(num)</span><br><span class="line">stack.peek() <span class="comment">// will not remove</span></span><br><span class="line">stack.pop()</span><br><span class="line">stack.isEmpty()</span><br></pre></td></tr></table></figure>
+
+<h1 id="7-Quene"><a href="#7-Quene" class="headerlink" title="7 Quene"></a>7 Quene</h1><p>FIFO - First In First Out</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Queue&lt;Integer&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">queue.offer(<span class="number">1</span>); <span class="comment">// recommend</span></span><br><span class="line">queue.offer(<span class="number">2</span>);</span><br><span class="line">queue.poll(); <span class="comment">// return 1</span></span><br><span class="line">queue.poll(); <span class="comment">// return 2</span></span><br></pre></td></tr></table></figure>
+<p>O(1)</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Throw Exception</th>
+<th>Returns special value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>insert</td>
+<td>add(e)</td>
+<td>offer(e)</td>
+</tr>
+<tr>
+<td>remove</td>
+<td>remove()</td>
+<td>poll()</td>
+</tr>
+<tr>
+<td>examine</td>
+<td>element()</td>
+<td>peek()</td>
+</tr>
+</tbody></table>
+<p>Often used in BFS</p>
+<h1 id="8-Deque-Double-ended-queue"><a href="#8-Deque-Double-ended-queue" class="headerlink" title="8 Deque (Double-ended queue)"></a>8 Deque (Double-ended queue)</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Deque&lt;Integer&gt; deque = <span class="keyword">new</span> ArrayDeque&lt;&gt;();</span><br><span class="line">deque.offerLast(<span class="number">1</span>);  <span class="comment">// 1</span></span><br><span class="line">deque.addLast(<span class="number">2</span>);    <span class="comment">// 1-&gt;2</span></span><br><span class="line">deque.offerFirst(<span class="number">0</span>); <span class="comment">// 0-&gt;1-&gt;2</span></span><br><span class="line">deque.peekFirst();   <span class="comment">// return 0</span></span><br><span class="line">deque.pollFirst();   <span class="comment">// return 0</span></span><br><span class="line">deque.pollLast();    <span class="comment">// return 2</span></span><br></pre></td></tr></table></figure>
+<p>O(1)</p>
+<h1 id="9-PiorityQueue-Heap"><a href="#9-PiorityQueue-Heap" class="headerlink" title="9 PiorityQueue(Heap)"></a>9 PiorityQueue(Heap)</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">PiorityQueue&lt;Integer&gt; pq = <span class="keyword">new</span> PiorityQueue&lt;&gt;();</span><br><span class="line">pq.offer(<span class="number">2</span>); <span class="comment">//O(logn)</span></span><br><span class="line">pq.add(<span class="number">0</span>);   <span class="comment">//O(logn)</span></span><br><span class="line">pq.add(<span class="number">1</span>);</span><br><span class="line">pq.peek();  <span class="comment">// return 0 O(1)</span></span><br><span class="line">pq.poll();  <span class="comment">// return 0 O(logn)</span></span><br><span class="line">pq.poll();  <span class="comment">// return 1 O(logn)</span></span><br></pre></td></tr></table></figure>
+<p>Initialization<br>O(nlogn) 1 number at a time<br>O(n) a lot numbers at once</p>
+<h1 id="10-Java-HashMap"><a href="#10-Java-HashMap" class="headerlink" title="10 Java HashMap"></a>10 Java HashMap</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String, Integer&gt;map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">map.put(<span class="string">&quot;A&quot;</span>, <span class="number">0</span>);</span><br><span class="line">map.put(<span class="string">&quot;B&quot;</span>, <span class="number">1</span>);</span><br><span class="line">map.put(<span class="string">&quot;C&quot;</span>, <span class="number">2</span>);</span><br><span class="line">map.get(<span class="string">&quot;A&quot;</span>); <span class="comment">// return 0</span></span><br><span class="line">map.get(<span class="string">&quot;C&quot;</span>); <span class="comment">// return 2</span></span><br><span class="line">map.containsKey(<span class="string">&quot;B&quot;</span>); <span class="comment">// return true</span></span><br><span class="line">map.toString(); <span class="comment">// &#123;A=0, B=1, C=2&#125;</span></span><br></pre></td></tr></table></figure>
+<p>O(1)<br>2 step input as key in hashmap index</p>
+<ol>
+<li>separate chaining</li>
+<li>open addressing</li>
+</ol>
+<h1 id="11-Set"><a href="#11-Set" class="headerlink" title="11 Set"></a>11 Set</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">set.add(<span class="number">1</span>);</span><br><span class="line">set.add(<span class="number">2</span>);</span><br><span class="line">set.contains(<span class="number">1</span>); <span class="comment">// return true</span></span><br><span class="line">set.contains(<span class="number">2</span>); <span class="comment">// return false</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="12-TreeMap-Java-Only"><a href="#12-TreeMap-Java-Only" class="headerlink" title="12 TreeMap(Java Only)"></a>12 TreeMap(Java Only)</h1><p>TreeMap is implemented based on red-black tree structure, and it is ordered by the key.<br>O(logn)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">put(key, value)</span><br><span class="line">lowerKey() &lt;</span><br><span class="line">floorKey() &lt;=</span><br><span class="line">higherKey() &gt;</span><br><span class="line">ceilingKey() &gt;=</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">TreeMap&lt;Integer, Integer&gt; map2 = <span class="keyword">new</span> TreeMap&lt;&gt;();</span><br><span class="line">map2.put(<span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line">map2.put(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">map2.put(<span class="number">3</span>, <span class="number">3</span>);</span><br><span class="line">map2.get(<span class="number">1</span>);</span><br><span class="line">System.out.println(<span class="string">&quot;12. treeMap&quot;</span>);</span><br><span class="line">System.out.println(map2.firstKey()); <span class="comment">// return 0</span></span><br><span class="line">System.out.println(map2.floorKey(<span class="number">1</span>));<span class="comment">// return 1 &lt;= 1</span></span><br><span class="line">System.out.println(map2.lowerKey(<span class="number">1</span>));<span class="comment">// return 0 &lt; 1</span></span><br><span class="line">System.out.println(map2.lowerKey(<span class="number">0</span>));<span class="comment">// return null</span></span><br><span class="line">System.out.println(map2.ceilingKey(<span class="number">2</span>));<span class="comment">//return 3</span></span><br></pre></td></tr></table></figure>
+<h1 id="13-TreeSet-Java-Only"><a href="#13-TreeSet-Java-Only" class="headerlink" title="13 TreeSet (Java Only)"></a>13 TreeSet (Java Only)</h1><p>TreeSet are stored in a sorted and ascending order.<br>TreeSeet does not preserve the insertion order of elements but elements are sorted by keys</p>
+<p>for insertion order of elements, use LinkedHashSet</p>
+<ul>
+<li>LRU cache <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">first(); <span class="comment">// return smallest element</span></span><br><span class="line">lower(num);</span><br><span class="line">floor(num);</span><br><span class="line">higher(num);</span><br><span class="line">ceiling(num);</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 13. TreeSet</span></span><br><span class="line">TreeSet&lt;Integer&gt; treeSet = <span class="keyword">new</span> TreeSet&lt;&gt;();</span><br><span class="line">treeSet.add(<span class="number">0</span>);</span><br><span class="line">treeSet.add(<span class="number">1</span>);</span><br><span class="line">treeSet.add(<span class="number">3</span>);</span><br><span class="line">System.out.println(treeSet.lower(<span class="number">1</span>)); <span class="comment">// return 0 &lt; 1</span></span><br><span class="line">System.out.println(treeSet.floor(<span class="number">1</span>)); <span class="comment">// return 1 &lt;=&gt;</span></span><br><span class="line">System.out.println(treeSet.higher(<span class="number">1</span>)); <span class="comment">// return 3 &gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="14-Disjoint-Set-Union-Find"><a href="#14-Disjoint-Set-Union-Find" class="headerlink" title="14 Disjoint-Set (Union Find)"></a>14 Disjoint-Set (Union Find)</h1><p>Union FInd is a data structure that keeps track of elements which are split into 1 or more disjoint sets.<br>Its has 2 primary operations: find and union</p>
+<p>union(x, y) find(x)<br>O(log) is the iterated algorithm</p>
+<p>Optimization: path compression union by rank</p>
+<p>Basic Implementation</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DSU</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[] parent;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">DSU</span><span class="params">(<span class="keyword">int</span> N)</span> </span>&#123;\</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
                 
             </div>
             <hr/>
@@ -737,13 +873,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/08/18/Basic-Data-Structure-6-Comparator/">
+                <a href="/2022/08/18/Basic-Data-Structure-1-Trie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="Basic Data Structure 6 - Comparator">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Basic Data Structure 1 - Trie">
                         
-                        <span class="card-title">Basic Data Structure 6 - Comparator</span>
+                        <span class="card-title">Basic Data Structure 1 - Trie</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
